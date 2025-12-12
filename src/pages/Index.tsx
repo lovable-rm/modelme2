@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import ScrollingWords from "@/components/ScrollingWords";
-import heroBackground from "@/assets/hero-background.jpg";
+import heroBackground from "@/assets/hero-background-v2.png";
 import volLogo from "@/assets/VOL_RGB.svg";
 import mouldMeLogo from "@/assets/ModelMe_sub_Negativ_Logo.svg";
 import volLogoFooter from "@/assets/VOL_RGB-footer.svg";
@@ -99,7 +99,7 @@ const Index = () => {
           style={{
             backgroundImage: `url(${heroBackground})`,
             backgroundSize: "cover",
-            backgroundPosition: "50% 60%",
+            backgroundPosition: "50% 20%",
           }}
         />
         
@@ -162,9 +162,9 @@ const Index = () => {
       </section>
 
       {/* Horizontal Scrollable Image Gallery */}
-      <section className="w-full bg-white overflow-hidden relative pb-20 md:pb-24">
+      <section className="w-full bg-white overflow-hidden relative pb-20 md:pb-34">
         <h2
-          className="absolute left-4 sm:left-auto sm:right-4 md:right-12 lg:right-48 bottom-[7rem] sm:bottom-[8rem] md:bottom-[9rem] lg:bottom-40 xl:bottom-40 text-white text-2xl sm:text-4xl md:text-6xl lg:text-[118px] xl:text-[178px] font-bold leading-[110%] pointer-events-none z-10"
+          className="absolute left-4 sm:left-auto sm:right-4 md:right-12 lg:right-48 bottom-[calc(7rem+20px)] sm:bottom-[calc(8rem+20px)] md:bottom-[calc(9rem+20px)] lg:bottom-[calc(10rem+20px)] xl:bottom-[calc(10rem+20px)] text-white text-2xl sm:text-4xl md:text-6xl lg:text-[118px] xl:text-[178px] font-bold leading-[110%] pointer-events-none z-10"
           style={{ fontFamily: "norman-variable, sans-serif", mixBlendMode: "difference" }}
         >
           2025
@@ -187,7 +187,7 @@ const Index = () => {
         </div>
         
         {/* Gallery Buttons */}
-        <div className="w-full flex justify-center">
+        <div className="w-full flex justify-center mt-[6rem]">
           <div className="flex flex-wrap gap-4 justify-center">
             <a
               href="#"
@@ -588,9 +588,9 @@ const Index = () => {
 
       {/* Partners Section */}
       <section className="w-full bg-white py-16 md:py-24 lg:py-32">
-        <div className="w-full pl-4 pr-4 md:pl-8 md:pr-8 lg:pl-16 lg:pr-16">
+        <div className="w-full">
           <h2
-            className="text-foreground text-2xl sm:text-4xl md:text-5xl lg:text-[68px] font-bold leading-[110%] tracking-tight"
+            className="text-foreground text-2xl sm:text-4xl md:text-5xl lg:text-[68px] font-bold leading-[110%] tracking-tight pl-4 pr-4 md:pl-8 md:pr-8 lg:pl-16 lg:pr-16"
             style={{ fontFamily: "Public Sans" }}
           >
             Unsere Partner
@@ -600,7 +600,6 @@ const Index = () => {
             <div className="w-32 md:w-48 lg:w-[306px] h-20 md:h-28 lg:h-[148px] bg-muted rounded" />
             <div className="w-16 md:w-20 lg:w-[109px] h-20 md:h-28 lg:h-[148px] bg-muted rounded" />
             <div className="w-40 md:w-64 lg:w-[416px] h-12 md:h-16 lg:h-[98px] bg-muted rounded" />
-            <div className="w-20 md:w-28 lg:w-[171px] h-24 md:h-32 lg:h-[187px] bg-muted rounded" />
           </div>
         </div>
       </section>
