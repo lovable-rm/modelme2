@@ -99,7 +99,7 @@ const Index = () => {
           style={{
             backgroundImage: `url(${heroBackground})`,
             backgroundSize: "cover",
-            backgroundPosition: "center",
+            backgroundPosition: "50% 60%",
           }}
         />
         
@@ -136,12 +136,12 @@ const Index = () => {
           {/* Top Right */}
           <div className="py-24 md:py-48 lg:py-64 flex flex-col items-end">
             <h2
-              className="text-lime font-bold text-4xl sm:text-6xl md:text-8xl lg:text-[150px] xl:text-[200px] leading-[110%] -mb-5"
+              className="text-lime font-bold text-4xl sm:text-6xl md:text-8xl lg:text-[148px] xl:text-[198px] leading-[110%] -mb-5"
               style={{ fontFamily: "norman-variable, sans-serif" }}
             >
               Perfekt.
             </h2>
-            <p className="font-inter text-foreground text-base md:text-xl lg:text-[28px] font-light !leading-[1.3] max-w-2xl mt-4 text-right">
+            <p className="font-inter text-foreground text-sm md:text-lg lg:text-[26px] font-light !leading-[1.3] max-w-2xl mt-4 text-right">
               Schönheit lebt im Unvollkommenen. Sie zeigt sich, wenn Menschen echt sind und sich nicht inszenieren müssen.
               Wenn Ausdruck entsteht, ohne Perfektionsdruck.
             </p>
@@ -149,7 +149,7 @@ const Index = () => {
           
           {/* Bottom Left */}
           <div className="pb-24 md:pb-48">
-            <p className="font-inter text-foreground text-base md:text-xl lg:text-[28px] font-light !leading-[1.3] max-w-2xl">
+            <p className="font-inter text-foreground text-sm md:text-lg lg:text-[26px] font-light !leading-[1.3] max-w-2xl">
               <span className="text-pink font-bold">Model Me</span> stellt genau diese Menschen in den
               Mittelpunkt – Menschen mit Geschichte. Keine glatten Kataloggesichter, sondern Individualität,
               die Haltung hat.
@@ -164,13 +164,13 @@ const Index = () => {
       {/* Horizontal Scrollable Image Gallery */}
       <section className="w-full bg-white overflow-hidden relative pb-20 md:pb-24">
         <h2
-          className="absolute left-4 sm:left-auto sm:right-4 md:right-12 lg:right-48 bottom-[7rem] sm:bottom-[8rem] md:bottom-[9rem] lg:bottom-40 xl:bottom-40 text-white text-2xl sm:text-4xl md:text-6xl lg:text-[120px] xl:text-[180px] font-bold leading-[110%] pointer-events-none z-10"
+          className="absolute left-4 sm:left-auto sm:right-4 md:right-12 lg:right-48 bottom-[7rem] sm:bottom-[8rem] md:bottom-[9rem] lg:bottom-40 xl:bottom-40 text-white text-2xl sm:text-4xl md:text-6xl lg:text-[118px] xl:text-[178px] font-bold leading-[110%] pointer-events-none z-10"
           style={{ fontFamily: "norman-variable, sans-serif", mixBlendMode: "difference" }}
         >
           2025
         </h2>
         <h2
-          className="absolute left-4 md:left-12 lg:left-48 bottom-[9rem] sm:bottom-[12rem] md:bottom-[15rem] lg:bottom-[22rem] xl:bottom-[26rem] text-white text-2xl sm:text-4xl md:text-6xl lg:text-[120px] xl:text-[180px] font-bold leading-[110%] pointer-events-none z-10"
+          className="absolute left-4 md:left-12 lg:left-48 bottom-[9rem] sm:bottom-[12rem] md:bottom-[15rem] lg:bottom-[22rem] xl:bottom-[26rem] text-white text-2xl sm:text-4xl md:text-6xl lg:text-[118px] xl:text-[178px] font-bold leading-[110%] pointer-events-none z-10"
           style={{ fontFamily: "norman-variable, sans-serif" }}
         >
           Impressionen
@@ -191,13 +191,13 @@ const Index = () => {
           <div className="flex flex-wrap gap-4 justify-center">
             <a
               href="#"
-              className="inline-flex h-12 md:h-[67px] px-4 md:px-5 items-center justify-center rounded border-2 border-foreground text-foreground font-inter text-base md:text-xl lg:text-[28px] font-bold leading-[110%] hover:bg-foreground hover:text-background transition-colors"
+              className="inline-flex h-12 md:h-[67px] px-4 md:px-5 items-center justify-center rounded border-2 border-foreground text-foreground font-inter text-sm md:text-lg lg:text-[26px] font-bold leading-[110%] hover:bg-foreground hover:text-background transition-colors"
             >
               Bildgalerie
             </a>
             <a
               href="#"
-              className="inline-flex h-12 md:h-[67px] px-4 md:px-5 items-center justify-center rounded border-2 border-foreground text-foreground font-inter text-base md:text-xl lg:text-[28px] font-bold leading-[110%] hover:bg-foreground hover:text-background transition-colors"
+              className="inline-flex h-12 md:h-[67px] px-4 md:px-5 items-center justify-center rounded border-2 border-foreground text-foreground font-inter text-sm md:text-lg lg:text-[26px] font-bold leading-[110%] hover:bg-foreground hover:text-background transition-colors"
             >
               Kennenlern-Videos
             </a>
@@ -209,7 +209,7 @@ const Index = () => {
       <section className="w-full bg-white py-24 md:py-48 lg:py-64">
         <div className="max-w-7xl px-4 md:px-8 lg:px-16">
           <p
-            className="text-foreground text-2xl sm:text-4xl md:text-5xl lg:text-[70px] font-black leading-[110%] tracking-tight"
+            className="text-foreground text-2xl sm:text-4xl md:text-5xl lg:text-[68px] font-black leading-[110%] tracking-tight"
             style={{ fontFamily: "Public Sans" }}
           >
             Modeln heute ist{" "}
@@ -227,7 +227,7 @@ const Index = () => {
         <div className="w-full">
           <p
             data-scroll-text="deine-reise"
-            className="text-black font-bold text-3xl sm:text-5xl md:text-7xl lg:text-[120px] xl:text-[200px] leading-[110%] whitespace-nowrap"
+            className="text-black font-bold text-3xl sm:text-5xl md:text-7xl lg:text-[118px] xl:text-[198px] leading-[110%] whitespace-nowrap"
             style={{ 
               fontFamily: "norman-variable, sans-serif",
               transform: "translateX(var(--scroll-x, -100%))",
@@ -242,7 +242,7 @@ const Index = () => {
         <div className="w-full bg-black pt-2 pb-18 md:pt-2 md:pb-22 lg:pt-10 lg:pb-40">
           <div className="w-full pl-4 pr-4 md:pl-8 md:pr-8 lg:pl-16 lg:pr-16">
             <h2
-              className="text-white font-bold text-3xl sm:text-5xl md:text-7xl lg:text-[120px] xl:text-[200px] leading-[110%] mb-12 md:mb-24 lg:mb-48"
+              className="text-white font-bold text-3xl sm:text-5xl md:text-7xl lg:text-[118px] xl:text-[198px] leading-[110%] mb-12 md:mb-24 lg:mb-48"
               style={{ fontFamily: "norman-variable, sans-serif" }}
             >
               Model Me
@@ -252,19 +252,19 @@ const Index = () => {
               {/* Step 01 */}
               <div className="flex flex-col md:flex-row items-start gap-6 md:gap-12 lg:gap-[70px]">
                 <p
-                  className="text-white font-bold text-5xl md:text-8xl lg:text-[150px] xl:text-[200px] leading-[110%] md:min-w-[200px] lg:min-w-[300px] xl:min-w-[400px]"
+                  className="text-white font-bold text-5xl md:text-8xl lg:text-[148px] xl:text-[198px] leading-[110%] md:min-w-[200px] lg:min-w-[300px] xl:min-w-[400px]"
                   style={{ fontFamily: "norman-variable, sans-serif" }}
                 >
                   01
                 </p>
                 <div className="flex flex-col gap-4 md:gap-6 lg:gap-[35px]">
                   <p
-                    className="text-white text-xl md:text-4xl lg:text-[70px] font-black leading-[100%]"
+                    className="text-white text-xl md:text-4xl lg:text-[68px] font-black leading-[100%]"
                     style={{ fontFamily: "Public Sans", lineHeight: "1" }}
                   >
                     Casting – dein Startmoment
                   </p>
-                  <p className="text-white font-inter text-sm md:text-xl lg:text-[28px] font-light !leading-[1.3] max-w-2xl">
+                  <p className="text-white font-inter text-xs md:text-lg lg:text-[26px] font-light !leading-[1.3] max-w-2xl">
                     <span className="text-lime font-bold">Model Me</span> beginnt mit einem offenen Casting, bei
                     dem sich jede:r bewerben kann – unabhängig von Kleidergröße, Alter oder Erfahrung. Hier geht es darum, zu zeigen, wer du
                     bist und was dich einzigartig macht.
@@ -275,19 +275,19 @@ const Index = () => {
               {/* Step 02 */}
               <div className="flex flex-col md:flex-row items-start gap-6 md:gap-12 lg:gap-[70px]">
                 <p
-                  className="text-white font-bold text-5xl md:text-8xl lg:text-[150px] xl:text-[200px] leading-[110%] md:min-w-[200px] lg:min-w-[300px] xl:min-w-[400px]"
+                  className="text-white font-bold text-5xl md:text-8xl lg:text-[148px] xl:text-[198px] leading-[110%] md:min-w-[200px] lg:min-w-[300px] xl:min-w-[400px]"
                   style={{ fontFamily: "norman-variable, sans-serif" }}
                 >
                   02
                 </p>
                 <div className="flex flex-col gap-4 md:gap-6 lg:gap-[35px]">
                   <p
-                    className="text-white text-xl md:text-4xl lg:text-[70px] font-black leading-[100%]"
+                    className="text-white text-xl md:text-4xl lg:text-[68px] font-black leading-[100%]"
                     style={{ fontFamily: "Public Sans", lineHeight: "1" }}
                   >
                     Training - gemeinsam wachsen
                   </p>
-                  <p className="text-white font-inter text-sm md:text-xl lg:text-[28px] font-light !leading-[1.3] max-w-2xl">
+                  <p className="text-white font-inter text-xs md:text-lg lg:text-[26px] font-light !leading-[1.3] max-w-2xl">
                     Aus allen Bewerber:innen entsteht eine ausgewählte Gruppe, die durch Workshops,
                     Laufstegtraining und professionelle Fotoshootings begleitet wird. In dieser Phase wächst
                     du in deinen Ausdruck hinein: selbstbewusst, mutig und sichtbar.
@@ -298,19 +298,19 @@ const Index = () => {
               {/* Step 03 */}
               <div className="flex flex-col md:flex-row items-start gap-6 md:gap-12 lg:gap-[70px]">
                 <p
-                  className="text-white font-bold text-5xl md:text-8xl lg:text-[150px] xl:text-[200px] leading-[110%] md:min-w-[200px] lg:min-w-[300px] xl:min-w-[400px]"
+                  className="text-white font-bold text-5xl md:text-8xl lg:text-[148px] xl:text-[198px] leading-[110%] md:min-w-[200px] lg:min-w-[300px] xl:min-w-[400px]"
                   style={{ fontFamily: "norman-variable, sans-serif" }}
                 >
                   03
                 </p>
                 <div className="flex flex-col gap-4 md:gap-6 lg:gap-[35px]">
                   <p
-                    className="text-white text-xl md:text-4xl lg:text-[70px] font-black leading-[100%]"
+                    className="text-white text-xl md:text-4xl lg:text-[68px] font-black leading-[100%]"
                     style={{ fontFamily: "Public Sans", lineHeight: "1" }}
                   >
                     Finale - die große Show
                   </p>
-                  <p className="text-white font-inter text-sm md:text-xl lg:text-[28px] font-light !leading-[1.3] max-w-2xl">
+                  <p className="text-white font-inter text-xs md:text-lg lg:text-[26px] font-light !leading-[1.3] max-w-2xl">
                     Der Höhepunkt ist die Award-Show am XX in der Otten Gravour in Hohenems. Dort werden die
                     Gewinner:innen gekürt – und eine Person erhält den Modelvertrag mit der TEAM AGENTUR und
                     läuft für Mike Galeli bei den Düsseldorf Fashion Days.
@@ -326,7 +326,7 @@ const Index = () => {
       <section className="w-full bg-white py-24 md:py-48 lg:py-64">
         <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
           <p
-            className="text-foreground font-bold text-3xl sm:text-5xl md:text-7xl lg:text-[120px] xl:text-[200px] leading-[110%] text-center mb-12 md:mb-24"
+            className="text-foreground font-bold text-3xl sm:text-5xl md:text-7xl lg:text-[118px] xl:text-[198px] leading-[110%] text-center mb-12 md:mb-24"
             style={{ fontFamily: "norman-variable, sans-serif" }}
           >
             Casting 2026
@@ -342,12 +342,12 @@ const Index = () => {
             ].map((item, index) => (
               <div key={index} className="flex flex-col items-center">
                 <p
-                  className="text-foreground text-3xl md:text-5xl lg:text-[70px] font-black leading-[100%]"
+                  className="text-foreground text-3xl md:text-5xl lg:text-[68px] font-black leading-[100%]"
                   style={{ fontFamily: "Public Sans" }}
                 >
                   {item.value}
                 </p>
-                <p className="text-foreground font-inter text-sm md:text-xl lg:text-[28px] font-light uppercase">
+                <p className="text-foreground font-inter text-xs md:text-lg lg:text-[26px] font-light uppercase">
                   {item.label}
                 </p>
               </div>
@@ -360,7 +360,7 @@ const Index = () => {
               href="https://www.model-me.at/#Neu"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-12 md:h-[67px] px-4 md:px-5 items-center justify-center rounded border-2 border-foreground text-foreground font-inter text-base md:text-xl lg:text-[28px] font-bold leading-[110%] hover:bg-foreground hover:text-background transition-colors"
+              className="inline-flex h-12 md:h-[67px] px-4 md:px-5 items-center justify-center rounded border-2 border-foreground text-foreground font-inter text-sm md:text-lg lg:text-[26px] font-bold leading-[110%] hover:bg-foreground hover:text-background transition-colors"
             >
               Jetzt anmelden
             </a>
@@ -372,7 +372,7 @@ const Index = () => {
       <section className="w-full bg-white overflow-hidden relative pb-16 md:pb-24 lg:pb-32">
         {/* Text overlay */}
         <h2
-          className="absolute left-4 md:left-12 lg:left-48 bottom-16 md:bottom-24 lg:bottom-36 text-white text-3xl sm:text-5xl md:text-7xl lg:text-[120px] xl:text-[200px] font-bold leading-[110%] pointer-events-none z-10 whitespace-nowrap"
+          className="absolute left-4 md:left-12 lg:left-48 bottom-16 md:bottom-24 lg:bottom-36 text-white text-3xl sm:text-5xl md:text-7xl lg:text-[118px] xl:text-[198px] font-bold leading-[110%] pointer-events-none z-10 whitespace-nowrap"
           style={{ fontFamily: "norman-variable, sans-serif", mixBlendMode: "difference" }}
         >
           einfach du
@@ -410,7 +410,7 @@ const Index = () => {
             {/* Left column */}
               <div className="flex-1 lg:max-w-2xl">
               <p
-                className="text-foreground text-2xl sm:text-4xl md:text-5xl lg:text-[70px] font-black leading-[110%]"
+                className="text-foreground text-2xl sm:text-4xl md:text-5xl lg:text-[68px] font-black leading-[110%]"
                 style={{ fontFamily: "Public Sans" }}
               >
                 Das sagen andere <br className="hidden md:block" /> über{" "}
@@ -420,32 +420,32 @@ const Index = () => {
               <div className="flex flex-col gap-8 md:gap-12 lg:gap-16 mt-12 md:mt-16 lg:mt-20">
                 {/* Testimonial 1 */}
                 <div>
-                  <p className="text-foreground font-inter text-sm md:text-xl lg:text-[28px] font-light !leading-[1.3]">
+                  <p className="text-foreground font-inter text-xs md:text-lg lg:text-[26px] font-light !leading-[1.3]">
                     Model Me zeigt, dass Ausstrahlung wichtiger ist als Normen. Wir suchen Menschen, die
                     Haltung haben – nicht Menschen, die in Vorgaben passen.
                   </p>
-                  <p className="text-foreground font-inter text-sm md:text-xl lg:text-[28px] font-semibold mt-4 md:mt-5">
+                  <p className="text-foreground font-inter text-xs md:text-lg lg:text-[26px] font-semibold mt-4 md:mt-5">
                     Jurymitglied
                   </p>
                 </div>
 
                 {/* Testimonial 2 */}
                 <div>
-                  <p className="text-foreground font-inter text-sm md:text-xl lg:text-[28px] font-light !leading-[1.3]">
+                  <p className="text-foreground font-inter text-xs md:text-lg lg:text-[26px] font-light !leading-[1.3]">
                     Ich bin hingegangen, obwohl ich dachte, ich passe nicht rein. Genau das war am Ende
                     mein Vorteil.
                   </p>
-                  <p className="text-foreground font-inter text-sm md:text-xl lg:text-[28px] font-semibold mt-4 md:mt-5">
+                  <p className="text-foreground font-inter text-xs md:text-lg lg:text-[26px] font-semibold mt-4 md:mt-5">
                     Teilnehmerin
                   </p>
                 </div>
 
                 {/* Testimonial 3 */}
                 <div>
-                  <p className="text-foreground font-inter text-sm md:text-xl lg:text-[28px] font-light !leading-[1.3]">
+                  <p className="text-foreground font-inter text-xs md:text-lg lg:text-[26px] font-light !leading-[1.3]">
                     Im Training hab ich verstanden, dass Haltung nicht mit Perfektion zu tun hat.
                   </p>
-                  <p className="text-foreground font-inter text-sm md:text-xl lg:text-[28px] font-semibold mt-4 md:mt-5">
+                  <p className="text-foreground font-inter text-xs md:text-lg lg:text-[26px] font-semibold mt-4 md:mt-5">
                     Teilnehmer
                   </p>
                 </div>
@@ -492,7 +492,7 @@ const Index = () => {
       <section className="w-full bg-white pb-16 md:pb-24 lg:pb-32">
         <div className="w-full pl-4 pr-4 md:pl-8 md:pr-8 lg:pl-16 lg:pr-16">
           <h2
-            className="text-foreground text-2xl sm:text-4xl md:text-5xl lg:text-[70px] font-black leading-[110%] mb-8 md:mb-12 lg:mb-16"
+            className="text-foreground text-2xl sm:text-4xl md:text-5xl lg:text-[68px] font-black leading-[110%] mb-8 md:mb-12 lg:mb-16"
             style={{ fontFamily: "Public Sans" }}
           >
             FAQ
@@ -542,7 +542,7 @@ const Index = () => {
                   hideChevron
                   className="flex justify-between items-center w-full hover:no-underline [&[data-state=open]_.arrow-down]:hidden [&[data-state=closed]_.arrow-up]:hidden"
                 >
-                  <span className="text-foreground font-inter text-sm md:text-xl lg:text-[28px] font-semibold leading-relaxed text-left">
+                  <span className="text-foreground font-inter text-xs md:text-lg lg:text-[26px] font-semibold leading-relaxed text-left">
                     {item.question}
                   </span>
                   <div className="flex-shrink-0 ml-4">
@@ -551,7 +551,7 @@ const Index = () => {
                   </div>
                 </AccordionTrigger>
                 <AccordionContent>
-                  <p className="text-foreground font-inter text-sm md:text-xl lg:text-[28px] font-light leading-[1.3] pt-3 md:pt-4 pr-12 md:pr-16 lg:pr-20">
+                  <p className="text-foreground font-inter text-xs md:text-lg lg:text-[26px] font-light leading-[1.3] pt-3 md:pt-4 pr-12 md:pr-16 lg:pr-20">
                     {item.answer}
                   </p>
                 </AccordionContent>
@@ -565,7 +565,7 @@ const Index = () => {
       <section className="w-full bg-white mt-24 md:mt-48">
         <div className="w-full pl-4 pr-4 md:pl-8 md:pr-8 lg:pl-16 lg:pr-16">
           <p
-            className="text-black font-bold text-3xl sm:text-5xl md:text-7xl lg:text-[120px] xl:text-[200px] leading-[110%]"
+            className="text-black font-bold text-3xl sm:text-5xl md:text-7xl lg:text-[118px] xl:text-[198px] leading-[110%]"
             style={{ fontFamily: "norman-variable, sans-serif" }}
           >
             Mediale
@@ -575,7 +575,7 @@ const Index = () => {
         <div className="w-full bg-black py-12 pb:-10 md:py-10 md:pb-12 lg:py-12 lg:pb-40">
           <div className="w-full pl-4 pr-4 md:pl-8 md:pr-8 lg:pl-16 lg:pr-16">
             <h2
-              className="text-white font-bold text-3xl sm:text-5xl md:text-7xl lg:text-[120px] xl:text-[200px] leading-[110%] mb-12 md:mb-24"
+              className="text-white font-bold text-3xl sm:text-5xl md:text-7xl lg:text-[118px] xl:text-[198px] leading-[110%] mb-12 md:mb-24"
               style={{ fontFamily: "norman-variable, sans-serif" }}
             >
               Berichterstattung
@@ -590,12 +590,12 @@ const Index = () => {
       <section className="w-full bg-white py-16 md:py-24 lg:py-32">
         <div className="w-full pl-4 pr-4 md:pl-8 md:pr-8 lg:pl-16 lg:pr-16">
           <h2
-            className="text-foreground text-2xl sm:text-4xl md:text-5xl lg:text-[70px] font-bold leading-[110%] tracking-tight"
+            className="text-foreground text-2xl sm:text-4xl md:text-5xl lg:text-[68px] font-bold leading-[110%] tracking-tight"
             style={{ fontFamily: "Public Sans" }}
           >
             Unsere Partner
           </h2>
-          <div className="flex flex-wrap items-center gap-4 md:gap-6 mt-8 md:mt-12 lg:mt-16">
+          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 mt-8 md:mt-12 lg:mt-16">
             <div className="w-32 md:w-48 lg:w-[306px] h-16 md:h-24 lg:h-[120px] bg-muted rounded" />
             <div className="w-32 md:w-48 lg:w-[306px] h-20 md:h-28 lg:h-[148px] bg-muted rounded" />
             <div className="w-16 md:w-20 lg:w-[109px] h-20 md:h-28 lg:h-[148px] bg-muted rounded" />
@@ -606,16 +606,16 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="w-full bg-black py-12 md:py-16 lg:py-20">
+      <footer className="w-full bg-black py-8 md:py-10 lg:py-12">
         <div className="w-full pl-4 pr-4 md:pl-8 md:pr-8 lg:pl-16 lg:pr-16">
           {/* Top Row */}
           <div className="flex flex-col md:flex-row justify-between items-start gap-6 md:gap-8">
             {/* Model Me and Tagline */}
             <div className="flex flex-col gap-2">
-              <span className="text-white font-bold text-lg md:text-2xl lg:text-[28px]" style={{ fontFamily: "Public Sans" }}>
+              <span className="text-white font-bold text-base md:text-xl lg:text-[26px]" style={{ fontFamily: "Public Sans" }}>
                 Model Me
               </span>
-              <span className="font-inter text-lg md:text-2xl lg:text-[28px] font-light">
+              <span className="font-inter text-base md:text-xl lg:text-[26px] font-light">
                 <span className="text-white">Nicht Perfekt? </span>
                 <span className="text-lime">Perfekt.</span>
               </span>
@@ -623,45 +623,45 @@ const Index = () => {
 
             {/* Social Links */}
             <div className="flex gap-6 md:gap-8">
-              <span className="text-white font-bold text-lg md:text-2xl lg:text-[28px]" style={{ fontFamily: "Public Sans" }}>
+              <span className="text-white font-bold text-base md:text-xl lg:text-[26px]" style={{ fontFamily: "Public Sans" }}>
                 Facebook
               </span>
-              <span className="text-white font-bold text-lg md:text-2xl lg:text-[28px]" style={{ fontFamily: "Public Sans" }}>
+              <span className="text-white font-bold text-base md:text-xl lg:text-[26px]" style={{ fontFamily: "Public Sans" }}>
                 Instagram
               </span>
             </div>
           </div>
 
           {/* Navigation Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 md:mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 md:mt-10">
             {/* Left Navigation */}
             <div className="flex flex-col gap-4 md:gap-6">
-              <span className="text-white font-inter text-lg md:text-2xl lg:text-[28px] font-light">Die Reise</span>
-              <span className="text-white font-inter text-lg md:text-2xl lg:text-[28px] font-light">FAQ</span>
-              <span className="text-white font-inter text-lg md:text-2xl lg:text-[28px] font-light">Impressionen</span>
+              <span className="text-white font-inter text-base md:text-xl lg:text-[26px] font-light">Die Reise</span>
+              <span className="text-white font-inter text-base md:text-xl lg:text-[26px] font-light">FAQ</span>
+              <span className="text-white font-inter text-base md:text-xl lg:text-[26px] font-light">Impressionen</span>
             </div>
 
             {/* Right Navigation */}
             <div className="flex flex-col gap-4 md:gap-6 md:items-end">
-              <a href="#" className="text-white font-inter text-lg md:text-2xl lg:text-[28px] font-light underline">
+              <a href="#" className="text-white font-inter text-base md:text-xl lg:text-[26px] font-light underline">
                 Kontakt
               </a>
-              <a href="#" className="text-lime font-inter text-lg md:text-2xl lg:text-[28px] font-light underline">
+              <a href="#" className="text-lime font-inter text-base md:text-xl lg:text-[26px] font-light underline">
                 Zum Casting anmelden
               </a>
             </div>
           </div>
 
           {/* Footer Logo */}
-          <div className="flex justify-center mt-12 md:mt-16">
+          <div className="flex justify-center mt-8 md:mt-10">
             <img src={volLogoFooter} alt="VOL.AT Logo" className="h-10 md:h-12 lg:h-[60px]" />
           </div>
 
           {/* Footer Bottom Text */}
-          <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 lg:gap-16 mt-8 md:mt-12 text-center">
-            <span className="text-white font-inter text-sm md:text-xl lg:text-[28px] font-light">Impressum</span>
-            <span className="text-white font-inter text-sm md:text-xl lg:text-[28px] font-light">© 2026 Alle Rechte vorbehalten</span>
-            <span className="text-white font-inter text-sm md:text-xl lg:text-[28px] font-light">Datenschutz</span>
+          <div className="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-8 lg:gap-16 mt-6 md:mt-8 text-center">
+            <span className="text-white font-inter text-xs md:text-lg lg:text-[26px] font-light">Impressum</span>
+            <span className="text-white font-inter text-xs md:text-lg lg:text-[26px] font-light">© 2026 Alle Rechte vorbehalten</span>
+            <span className="text-white font-inter text-xs md:text-lg lg:text-[26px] font-light">Datenschutz</span>
           </div>
         </div>
       </footer>
