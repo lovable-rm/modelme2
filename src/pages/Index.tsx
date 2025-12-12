@@ -67,6 +67,29 @@ const Index = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const galleryElement = document.querySelector('[data-gallery="horizontal-scroll"]');
+      if (galleryElement) {
+        const rect = galleryElement.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        
+        // Calculate scroll progress when element is in viewport
+        if (rect.top < windowHeight && rect.bottom > 0) {
+          const progress = Math.max(0, Math.min(1, (windowHeight - rect.top) / (windowHeight + rect.height)));
+          // Calculate how much to translate (from 0% to negative percentage based on content width)
+          const maxScroll = galleryElement.scrollWidth - galleryElement.clientWidth;
+          const translateX = -(progress * maxScroll);
+          (galleryElement as HTMLElement).style.transform = `translateX(${translateX}px)`;
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial call
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <div className="w-full overflow-x-hidden">
       {/* Hero Section */}
@@ -87,9 +110,9 @@ const Index = () => {
           <img src={mouldMeLogo} alt="Mould Me Logo" className="h-10 md:h-12 lg:h-16 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
         </div>
 
-        {/* Hero Text - positioned at bottom, flush with image edge */}
+        {/* Hero Text - positioned at bottom */}
         <h1
-          className="absolute bottom-[-0.01px] left-0 right-0 text-center text-white text-[clamp(2rem,10vw,200px)] px-4 md:pl-12 lg:pl-24 xl:pl-[400px] z-30 whitespace-nowrap"
+          className="absolute bottom-0.5 left-0 right-0 text-center text-white text-[clamp(2rem,10vw,200px)] px-4 md:pl-12 lg:pl-24 xl:pl-[400px]"
           style={{
             fontFamily: "norman-variable, sans-serif",
             fontSize: "clamp(2rem, 10vw, 200px)",
@@ -118,7 +141,7 @@ const Index = () => {
             >
               Perfekt.
             </h2>
-            <p className="font-inter text-foreground text-base md:text-xl lg:text-[28px] font-light leading-relaxed max-w-2xl mt-4 text-right">
+            <p className="font-inter text-foreground text-base md:text-xl lg:text-[28px] font-light !leading-[1.3] max-w-2xl mt-4 text-right">
               Schönheit lebt im Unvollkommenen. Sie zeigt sich, wenn Menschen echt sind und sich nicht inszenieren müssen.
               Wenn Ausdruck entsteht, ohne Perfektionsdruck.
             </p>
@@ -126,7 +149,7 @@ const Index = () => {
           
           {/* Bottom Left */}
           <div className="pb-24 md:pb-48">
-            <p className="font-inter text-foreground text-base md:text-xl lg:text-[28px] font-light leading-relaxed max-w-2xl">
+            <p className="font-inter text-foreground text-base md:text-xl lg:text-[28px] font-light !leading-[1.3] max-w-2xl">
               <span className="text-pink font-bold">Model Me</span> stellt genau diese Menschen in den
               Mittelpunkt – Menschen mit Geschichte. Keine glatten Kataloggesichter, sondern Individualität,
               die Haltung hat.
@@ -152,13 +175,13 @@ const Index = () => {
         >
           Impressionen
         </h2>
-        <div className="flex items-center gap-4 md:gap-6 lg:gap-[35px] overflow-x-auto px-4 md:px-8 lg:px-12 scrollbar-hide snap-x snap-mandatory mb-8 md:mb-12">
+        <div data-gallery="horizontal-scroll" className="flex items-center gap-4 md:gap-6 lg:gap-[35px] px-4 md:px-8 lg:px-12 mb-8 md:mb-12" style={{ transition: 'transform 0.05s linear', willChange: 'transform' }}>
           {[fashion1, fashion2, fashion3, fashion4, fashion5, fashion6, fashion7].map((image, index) => (
             <img
               key={index}
               src={image}
               alt={`Fashion model ${index + 1}`}
-              className="flex-shrink-0 h-64 md:h-96 lg:h-[500px] xl:h-[600px] w-auto object-cover rounded-2xl snap-center"
+              className="flex-shrink-0 h-64 md:h-96 lg:h-[500px] xl:h-[600px] w-auto object-cover rounded-2xl"
             />
           ))}
         </div>
@@ -216,7 +239,7 @@ const Index = () => {
         </div>
 
         {/* Black section */}
-        <div className="w-full bg-black py-8 md:py-12 lg:py-20">
+        <div className="w-full bg-black pt-2 pb-18 md:pt-2 md:pb-22 lg:pt-10 lg:pb-40">
           <div className="w-full pl-4 pr-4 md:pl-8 md:pr-8 lg:pl-16 lg:pr-16">
             <h2
               className="text-white font-bold text-3xl sm:text-5xl md:text-7xl lg:text-[120px] xl:text-[200px] leading-[110%] mb-12 md:mb-24 lg:mb-48"
@@ -241,7 +264,7 @@ const Index = () => {
                   >
                     Casting – dein Startmoment
                   </p>
-                  <p className="text-white font-inter text-sm md:text-xl lg:text-[28px] font-light leading-relaxed max-w-2xl">
+                  <p className="text-white font-inter text-sm md:text-xl lg:text-[28px] font-light !leading-[1.3] max-w-2xl">
                     <span className="text-lime font-bold">Model Me</span> beginnt mit einem offenen Casting, bei
                     dem sich jede:r bewerben kann – unabhängig von Kleidergröße, Alter oder Erfahrung. Hier geht es darum, zu zeigen, wer du
                     bist und was dich einzigartig macht.
@@ -264,7 +287,7 @@ const Index = () => {
                   >
                     Training - gemeinsam wachsen
                   </p>
-                  <p className="text-white font-inter text-sm md:text-xl lg:text-[28px] font-light leading-relaxed max-w-2xl">
+                  <p className="text-white font-inter text-sm md:text-xl lg:text-[28px] font-light !leading-[1.3] max-w-2xl">
                     Aus allen Bewerber:innen entsteht eine ausgewählte Gruppe, die durch Workshops,
                     Laufstegtraining und professionelle Fotoshootings begleitet wird. In dieser Phase wächst
                     du in deinen Ausdruck hinein: selbstbewusst, mutig und sichtbar.
@@ -287,7 +310,7 @@ const Index = () => {
                   >
                     Finale - die große Show
                   </p>
-                  <p className="text-white font-inter text-sm md:text-xl lg:text-[28px] font-light leading-relaxed max-w-2xl">
+                  <p className="text-white font-inter text-sm md:text-xl lg:text-[28px] font-light !leading-[1.3] max-w-2xl">
                     Der Höhepunkt ist die Award-Show am XX in der Otten Gravour in Hohenems. Dort werden die
                     Gewinner:innen gekürt – und eine Person erhält den Modelvertrag mit der TEAM AGENTUR und
                     läuft für Mike Galeli bei den Düsseldorf Fashion Days.
@@ -397,7 +420,7 @@ const Index = () => {
               <div className="flex flex-col gap-8 md:gap-12 lg:gap-16 mt-12 md:mt-16 lg:mt-20">
                 {/* Testimonial 1 */}
                 <div>
-                  <p className="text-foreground font-inter text-sm md:text-xl lg:text-[28px] font-light leading-relaxed">
+                  <p className="text-foreground font-inter text-sm md:text-xl lg:text-[28px] font-light !leading-[1.3]">
                     Model Me zeigt, dass Ausstrahlung wichtiger ist als Normen. Wir suchen Menschen, die
                     Haltung haben – nicht Menschen, die in Vorgaben passen.
                   </p>
@@ -408,7 +431,7 @@ const Index = () => {
 
                 {/* Testimonial 2 */}
                 <div>
-                  <p className="text-foreground font-inter text-sm md:text-xl lg:text-[28px] font-light leading-relaxed">
+                  <p className="text-foreground font-inter text-sm md:text-xl lg:text-[28px] font-light !leading-[1.3]">
                     Ich bin hingegangen, obwohl ich dachte, ich passe nicht rein. Genau das war am Ende
                     mein Vorteil.
                   </p>
@@ -419,7 +442,7 @@ const Index = () => {
 
                 {/* Testimonial 3 */}
                 <div>
-                  <p className="text-foreground font-inter text-sm md:text-xl lg:text-[28px] font-light leading-relaxed">
+                  <p className="text-foreground font-inter text-sm md:text-xl lg:text-[28px] font-light !leading-[1.3]">
                     Im Training hab ich verstanden, dass Haltung nicht mit Perfektion zu tun hat.
                   </p>
                   <p className="text-foreground font-inter text-sm md:text-xl lg:text-[28px] font-semibold mt-4 md:mt-5">
@@ -528,7 +551,7 @@ const Index = () => {
                   </div>
                 </AccordionTrigger>
                 <AccordionContent>
-                  <p className="text-foreground font-inter text-sm md:text-xl lg:text-[28px] font-light leading-relaxed pt-3 md:pt-4">
+                  <p className="text-foreground font-inter text-sm md:text-xl lg:text-[28px] font-light leading-[1.3] pt-3 md:pt-4 pr-12 md:pr-16 lg:pr-20">
                     {item.answer}
                   </p>
                 </AccordionContent>
@@ -549,7 +572,7 @@ const Index = () => {
           </p>
         </div>
 
-        <div className="w-full bg-black py-12 md:py-20 lg:py-32">
+        <div className="w-full bg-black py-12 pb:-10 md:py-10 md:pb-12 lg:py-12 lg:pb-40">
           <div className="w-full pl-4 pr-4 md:pl-8 md:pr-8 lg:pl-16 lg:pr-16">
             <h2
               className="text-white font-bold text-3xl sm:text-5xl md:text-7xl lg:text-[120px] xl:text-[200px] leading-[110%] mb-12 md:mb-24"
