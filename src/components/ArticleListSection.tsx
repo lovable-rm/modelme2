@@ -108,7 +108,7 @@ const ArticleListSection: React.FC<ArticleListSectionProps> = ({
             onClick={() => handleArticleClick(article)}
           >
             {/* Title */}
-            <h3 className="flex-1 text-[#F5ECEC] font-inter text-sm md:text-base lg:text-[26px] font-semibold leading-[130%]">
+            <h3 className="flex-1 text-[#F5ECEC] font-inter text-base md:text-lg lg:text-[28px] font-semibold leading-[130%]">
               {article.title}
             </h3>
 
@@ -140,7 +140,7 @@ const ArticleListSection: React.FC<ArticleListSectionProps> = ({
         href="https://www.vol.at/themen/model-me"
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-12 md:mt-16 h-12 md:h-[67px] px-4 md:px-5 py-3 rounded border-2 border-white bg-transparent text-white font-inter text-sm md:text-base lg:text-[26px] font-bold leading-[110%] hover:bg-white/10 transition-colors inline-flex items-center justify-center"
+        className="mt-12 md:mt-16 h-12 md:h-[67px] px-4 md:px-5 py-3 rounded border-2 border-white bg-transparent text-white font-inter text-base md:text-lg lg:text-[28px] font-bold leading-[110%] hover:bg-white/10 transition-colors inline-flex items-center justify-center"
       >
         Alle Artikel
       </a>
