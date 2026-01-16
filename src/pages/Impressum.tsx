@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import volLogo from "@/assets/VOL_RGB.svg";
-import modelMeLogo from "@/assets/modelme-logo.png";
+import modelMeLogo from "@/assets/ModelMe_sub_Logo.svg";
 
 const Impressum = () => {
   return (
@@ -10,7 +10,7 @@ const Impressum = () => {
         <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 md:gap-4">
             <img src={volLogo} alt="VOL.AT Logo" className="h-8 md:h-10 lg:h-12" />
-            <img src={modelMeLogo} alt="Model Me Logo" className="h-12 md:h-16 lg:h-20" />
+            <img src={modelMeLogo} alt="Model Me Logo" className="h-7 md:h-10 lg:h-12" />
           </Link>
         </div>
       </header>
@@ -64,6 +64,7 @@ const Impressum = () => {
 
               <p><strong>Foto Credits</strong></p>
               <p>Philipp Steurer</p>
+              <p>Peter Sturn</p>
           
 
               <br />

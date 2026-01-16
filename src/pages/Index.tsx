@@ -722,10 +722,10 @@ const Index = () => {
           <div className="flex flex-col md:flex-row justify-between items-start gap-6 md:gap-8 lg:gap-12">
             {/* Model Me and Tagline */}
             <div className="flex flex-col gap-2">
-              <span className="text-black font-bold text-base md:text-xl lg:text-2xl" style={{ fontFamily: "Public Sans" }}>
+              <span className="text-black font-bold text-sm md:text-lg lg:text-xl" style={{ fontFamily: "Public Sans" }}>
                 Model Me
               </span>
-              <span className="font-inter text-base md:text-xl lg:text-2xl font-light">
+              <span className="font-inter text-sm md:text-lg lg:text-xl font-light">
                 <span className="text-black">Nicht Perfekt? </span>
                 <span className="text-lime">Perfekt.</span>
               </span>
@@ -737,7 +737,7 @@ const Index = () => {
                 href="https://www.facebook.com/share/17oQdQzCmA/?mibextid=wwXIfr"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-black font-bold text-base md:text-xl lg:text-2xl hover:text-lime transition-colors" 
+                className="text-black font-bold text-sm md:text-lg lg:text-xl hover:text-lime transition-colors" 
                 style={{ fontFamily: "Public Sans" }}
               >
                 Facebook
@@ -746,7 +746,7 @@ const Index = () => {
                 href="https://www.instagram.com/modelme.at?igsh=aHM1aWx4dmEwMGc4&utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-black font-bold text-base md:text-xl lg:text-2xl hover:text-lime transition-colors" 
+                className="text-black font-bold text-sm md:text-lg lg:text-xl hover:text-lime transition-colors" 
                 style={{ fontFamily: "Public Sans" }}
               >
                 Instagram
@@ -785,7 +785,7 @@ const Index = () => {
               Impressum & Datenschutz
             </Link>
             <span className="text-black font-inter text-xs md:text-sm lg:text-base font-light">© 2026 Alle Rechte vorbehalten</span>
-            <span className="text-black font-inter text-xs md:text-sm lg:text-base font-light">Russmedia Digital</span>
+            <span className="text-black font-inter text-xs md:text-sm lg:text-base font-light">Russmedia Verlag</span>
           </div>
         </div>
       </footer>
