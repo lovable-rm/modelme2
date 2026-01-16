@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import ScrollingWords from "@/components/ScrollingWords";
 import heroBackground from "@/assets/Jennifer_Teles_Model_Me_1.jpg";
-import volLogo from "@/assets/VOL_RGB.svg";
+// import volLogo from "@/assets/VOL_RGB.svg";
 import mouldMeLogo from "@/assets/ModelMe_sub_Negativ_Logo.svg";
 import volLogoFooter from "@/assets/VOL_RGB-footer.svg";
 import fashion1 from "@/assets/bilder-neu/0F8A0577.jpg";
@@ -159,7 +159,7 @@ const Index = () => {
         {/* Header */}
         <div className="absolute top-0 left-0 right-0 h-16 md:h-20 lg:h-[103px] bg-white/50 z-10" />
         <div className="absolute top-0 left-0 right-0 h-16 md:h-20 lg:h-[103px] flex items-center justify-between px-4 md:px-8 lg:px-12 z-20">
-          <img src={volLogo} alt="VOL.AT Logo" className="h-10 md:h-12 lg:h-16" />
+          {/* <img src={volLogo} alt="VOL.AT Logo" className="h-10 md:h-12 lg:h-16" /> */}
           <img src={mouldMeLogo} alt="Mould Me Logo" className="h-10 md:h-12 lg:h-16 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
         </div>
 
@@ -219,14 +219,14 @@ const Index = () => {
       {/* Horizontal Scrollable Image Gallery */}
       <section id="impressionen" className="w-full bg-white overflow-hidden relative pb-20 md:pb-34 pt-4 md:pt-0">
         <h2
-          className="absolute right-4 md:right-8 lg:right-16 xl:right-24 top-auto bottom-[calc(5rem-70px)] md:bottom-[calc(7rem-70px)] lg:bottom-[calc(9rem-70px)] xl:bottom-[calc(11rem-70px)] text-white text-4xl md:text-6xl lg:text-8xl xl:text-[148px] font-bold leading-[110%] pointer-events-none z-10"
+          className="absolute right-4 md:right-8 lg:right-16 xl:right-24 top-auto bottom-[calc(6rem)] md:bottom-[calc(7rem-70px)] lg:bottom-[calc(9rem-70px)] xl:bottom-[calc(11rem-70px)] text-white text-5xl md:text-6xl lg:text-8xl xl:text-[148px] font-bold leading-[110%] pointer-events-none z-10"
           style={{ fontFamily: "norman-variable, sans-serif", mixBlendMode: "difference" }}
         >
           2025
         </h2>
         <h2
-          className="absolute left-4 md:left-8 lg:left-16 xl:left-24 top-auto bottom-[calc(10rem+20px)] md:bottom-[calc(15rem)] lg:bottom-[calc(20rem)] xl:bottom-[calc(24rem)] text-black md:text-white text-4xl md:text-6xl lg:text-8xl xl:text-[148px] font-bold leading-[110%] pointer-events-none z-10"
-          style={{ fontFamily: "norman-variable, sans-serif" }}
+          className="absolute left-4 md:left-8 lg:left-16 xl:left-24 top-auto bottom-[calc(10rem+20px)] md:bottom-[calc(15rem)] lg:bottom-[calc(20rem)] xl:bottom-[calc(24rem)] text-white text-5xl md:text-6xl lg:text-8xl xl:text-[148px] font-bold leading-[110%] pointer-events-none z-10"
+          style={{ fontFamily: "norman-variable, sans-serif", mixBlendMode: "difference" }}
         >
           Impressionen
         </h2>
@@ -473,28 +473,28 @@ const Index = () => {
                   „Bei Model Me geht es nicht darum, wie gut jemand in ein vorgegebenes Bild passt. Entscheidend ist die Persönlichkeit dahinter und die Geschichte, die jemand mitbringt. Vielfalt ist hier keine Ausnahme, sondern das Prinzip.“
                   </p>
                   <p className="text-foreground font-inter text-base md:text-lg lg:text-[26px] font-semibold mt-4 md:mt-5">
-                    Tanja Schwendinger
+                    Tanja Schwendinger, VN-Redakteurin
                   </p>
                 </div>
 
                 {/* Testimonial 2 */}
                 <div>
                   <p className="text-foreground font-inter text-base md:text-lg lg:text-[26px] font-light !leading-[1.3]">
-                    Ich bin hingegangen, obwohl ich dachte, ich passe nicht rein. Genau das war am Ende
-                    mein Vorteil.
+                  „Wir suchen nach Persönlichkeiten, nach einem außergewöhnlichen Look und ganz viel Wandelbarkeit.
+                    Bei Model Me geht es vor allem auch um die Ausstrahlung und das gewisse Auftreten. Wichtig sind auch Durchhaltevermögen, Disziplin, Freundlichkeit und eine große Portion Leidenschaft.“
                   </p>
                   <p className="text-foreground font-inter text-base md:text-lg lg:text-[26px] font-semibold mt-4 md:mt-5">
-                    Teilnehmerin
+                  Simone Sturn, Geschäftsführerin Team Agentur
                   </p>
                 </div>
 
                 {/* Testimonial 3 */}
                 <div>
                   <p className="text-foreground font-inter text-base md:text-lg lg:text-[26px] font-light !leading-[1.3]">
-                    Im Training hab ich verstanden, dass Haltung nicht mit Perfektion zu tun hat.
+                  „Lorem Ipsum - Zitat folgt noch“
                   </p>
                   <p className="text-foreground font-inter text-base md:text-lg lg:text-[26px] font-semibold mt-4 md:mt-5">
-                    Teilnehmer
+                  Jennifer Teles, Model Me Gewinnerin 2025
                   </p>
                 </div>
               </div>
@@ -696,7 +696,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="w-full bg-whitepy-8 md:py-12 lg:py-16">
+      <footer className="w-full bg-white py-6 md:py-8 lg:py-10">
         <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
           {/* Top Row */}
           <div className="flex flex-col md:flex-row justify-between items-start gap-6 md:gap-8 lg:gap-12">
