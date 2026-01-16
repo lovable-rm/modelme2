@@ -79,43 +79,59 @@ const Index = () => {
   }, []);
 
   useEffect(() => {
+    let ticking = false;
+    
     const handleScroll = () => {
-      const scrollElement = document.querySelector('[data-scroll-text="deine-reise"]');
-      if (scrollElement) {
-        const rect = scrollElement.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-        
-        // Calculate scroll progress when element is in viewport
-        if (rect.top < windowHeight && rect.bottom > 0) {
-          const progress = Math.max(0, Math.min(1, (windowHeight - rect.top) / (windowHeight + rect.height)));
-          const translateX = -100 + (progress * 200); // From -100% to 100%
-          (scrollElement as HTMLElement).style.setProperty('--scroll-x', `${translateX}%`);
-        }
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const scrollElement = document.querySelector('[data-scroll-text="deine-reise"]');
+          if (scrollElement) {
+            const rect = scrollElement.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            
+            // Calculate scroll progress when element is in viewport
+            if (rect.top < windowHeight && rect.bottom > 0) {
+              const progress = Math.max(0, Math.min(1, (windowHeight - rect.top) / (windowHeight + rect.height)));
+              const translateX = -100 + (progress * 200); // From -100% to 100%
+              (scrollElement as HTMLElement).style.setProperty('--scroll-x', `${translateX}%`);
+            }
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll(); // Initial call
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   useEffect(() => {
+    let ticking = false;
+    
     const handleScroll = () => {
-      const nichtPerfektElement = document.querySelector('[data-scroll-text="nicht-perfekt"]');
-      if (nichtPerfektElement) {
-        const rect = nichtPerfektElement.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-        
-        // Calculate scroll progress when element is in viewport
-        if (rect.top < windowHeight && rect.bottom > 0) {
-          const progress = Math.max(0, Math.min(1, (windowHeight - rect.top) / (windowHeight + rect.height)));
-          const translateX = 30 + (progress * -150); // Start at 50% right, move to -150% left
-          (nichtPerfektElement as HTMLElement).style.transform = `translateX(${translateX}%)`;
-        }
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const nichtPerfektElement = document.querySelector('[data-scroll-text="nicht-perfekt"]');
+          if (nichtPerfektElement) {
+            const rect = nichtPerfektElement.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            
+            // Calculate scroll progress when element is in viewport
+            if (rect.top < windowHeight && rect.bottom > 0) {
+              const progress = Math.max(0, Math.min(1, (windowHeight - rect.top) / (windowHeight + rect.height)));
+              const translateX = 30 + (progress * -110); // Start at 30% right, move to -120% left
+              (nichtPerfektElement as HTMLElement).style.transform = `translateX(${translateX}%)`;
+            }
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll(); // Initial call
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -166,7 +182,7 @@ const Index = () => {
         {/* Hero Text - positioned at bottom */}
         <h1
           data-scroll-text="nicht-perfekt"
-          className="absolute bottom-0.5 left-0 right-0 text-center text-white text-6xl md:text-7xl lg:text-[118px] xl:text-[200px] px-4 md:pl-12 lg:pl-24 xl:pl-[400px] -mb-2 md:-mb-6 lg:-mb-8"
+          className="absolute bottom-0.5 left-0 right-0 text-center text-white text-[80px] md:text-7xl lg:text-[118px] xl:text-[200px] px-4 md:pl-12 lg:pl-24 xl:pl-[400px] -mb-2 md:-mb-6 lg:-mb-8 whitespace-nowrap"
           style={{
             fontFamily: "norman-variable, sans-serif",
             fontStyle: "normal",
@@ -174,7 +190,6 @@ const Index = () => {
             lineHeight: "110%",
             fontFeatureSettings: "'liga' off, 'clig' off",
             mixBlendMode: "exclusion",
-            transition: "transform 0.05s linear",
           }}
         >
           Nicht Perfekt?
@@ -281,11 +296,10 @@ const Index = () => {
         <div className="w-full">
           <p
             data-scroll-text="deine-reise"
-            className="text-black font-bold text-6xl sm:text-6xl md:text-7xl lg:text-[118px] xl:text-[198px] leading-[110%] whitespace-nowrap"
+            className="text-black font-bold text-6xl sm:text-6xl md:text-7xl lg:text-[118px] xl:text-[198px] leading-[109%] whitespace-nowrap"
             style={{ 
               fontFamily: "norman-variable, sans-serif",
               transform: "translateX(var(--scroll-x, -100%))",
-              transition: "transform 0.05s linear"
             }}
           >
             Deine Reise bei
@@ -612,7 +626,7 @@ const Index = () => {
       <section className="w-full bg-white mt-24 md:mt-32 lg:mt-48">
         <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
           <p
-            className="text-black font-bold text-6xl md:text-6xl lg:text-8xl xl:text-[148px] leading-[110%]"
+            className="text-black font-bold text-6xl md:text-6xl lg:text-8xl xl:text-[148px] leading-[109%]"
             style={{ fontFamily: "norman-variable, sans-serif" }}
           >
             Mediale
