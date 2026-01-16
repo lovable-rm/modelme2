@@ -237,6 +237,7 @@ const Index = () => {
               src={image}
               alt={`Fashion model ${index + 1}`}
               className="flex-shrink-0 h-64 md:h-96 lg:h-[500px] xl:h-[600px] w-auto object-cover rounded-2xl"
+              loading="lazy"
             />
           ))}
         </div>
@@ -441,6 +442,7 @@ const Index = () => {
               loop
               muted
               playsInline
+              preload="metadata"
               className="w-full md:w-[110%] lg:w-[600px] xl:w-[800px] h-auto lg:h-[500px] xl:h-[650px] rounded-3xl object-cover"
             >
               <source src="/fuer AE Casino.mp4" type="video/mp4" />
@@ -504,6 +506,7 @@ const Index = () => {
                 src={testimonialRunway}
                 alt="Fashion runway show"
                 className="w-[120%] md:w-[110%] lg:w-[450px] xl:w-[550px] h-auto lg:h-[400px] xl:h-[500px] rounded-3xl object-cover ml-auto"
+                loading="lazy"
               />
             </div>
           </div>
@@ -669,6 +672,7 @@ const Index = () => {
                     src={logo}
                     alt={`Partner ${index + 1}`}
                     className="h-16 md:h-20 lg:h-24 w-auto object-contain"
+                    loading="lazy"
                   />
                 </div>
               ))}
@@ -682,6 +686,7 @@ const Index = () => {
                     src={logo}
                     alt={`Partner ${index + 1}`}
                     className="h-16 md:h-20 lg:h-24 w-auto object-contain"
+                    loading="lazy"
                   />
                 </div>
               ))}
