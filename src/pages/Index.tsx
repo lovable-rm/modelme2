@@ -166,10 +166,9 @@ const Index = () => {
         {/* Hero Text - positioned at bottom */}
         <h1
           data-scroll-text="nicht-perfekt"
-          className="absolute bottom-0.5 left-0 right-0 text-center text-white text-[clamp(2rem,10vw,200px)] px-4 md:pl-12 lg:pl-24 xl:pl-[400px] -mb-2 md:-mb-6 lg:-mb-8"
+          className="absolute bottom-0.5 left-0 right-0 text-center text-white text-6xl md:text-7xl lg:text-[118px] xl:text-[200px] px-4 md:pl-12 lg:pl-24 xl:pl-[400px] -mb-2 md:-mb-6 lg:-mb-8"
           style={{
             fontFamily: "norman-variable, sans-serif",
-            fontSize: "clamp(4rem, 10vw, 200px)",
             fontStyle: "normal",
             fontWeight: 700,
             lineHeight: "110%",
@@ -219,13 +218,13 @@ const Index = () => {
       {/* Horizontal Scrollable Image Gallery */}
       <section id="impressionen" className="w-full bg-white overflow-hidden relative pb-20 md:pb-34 pt-4 md:pt-0">
         <h2
-          className="absolute right-4 md:right-8 lg:right-16 xl:right-24 top-auto bottom-[calc(6rem)] md:bottom-[calc(7rem-70px)] lg:bottom-[calc(9rem-70px)] xl:bottom-[calc(11rem-70px)] text-white text-5xl md:text-6xl lg:text-8xl xl:text-[148px] font-bold leading-[110%] pointer-events-none z-10"
+          className="absolute right-4 md:right-8 lg:right-16 xl:right-24 top-auto bottom-[calc(6rem)] md:bottom-[calc(7rem-70px)] lg:bottom-[calc(9rem-70px)] xl:bottom-[calc(11rem-70px)] text-white text-6xl md:text-6xl lg:text-8xl xl:text-[148px] font-bold leading-[110%] pointer-events-none z-10"
           style={{ fontFamily: "norman-variable, sans-serif", mixBlendMode: "difference" }}
         >
           2025
         </h2>
         <h2
-          className="absolute left-4 md:left-8 lg:left-16 xl:left-24 top-auto bottom-[calc(10rem+20px)] md:bottom-[calc(15rem)] lg:bottom-[calc(20rem)] xl:bottom-[calc(24rem)] text-white text-5xl md:text-6xl lg:text-8xl xl:text-[148px] font-bold leading-[110%] pointer-events-none z-10"
+          className="absolute left-4 md:left-8 lg:left-16 xl:left-24 top-auto bottom-[calc(10rem+20px)] md:bottom-[calc(15rem)] lg:bottom-[calc(20rem)] xl:bottom-[calc(24rem)] text-white text-6xl md:text-6xl lg:text-8xl xl:text-[148px] font-bold leading-[110%] pointer-events-none z-10"
           style={{ fontFamily: "norman-variable, sans-serif", mixBlendMode: "difference" }}
         >
           Impressionen
@@ -237,7 +236,6 @@ const Index = () => {
               src={image}
               alt={`Fashion model ${index + 1}`}
               className="flex-shrink-0 h-64 md:h-96 lg:h-[500px] xl:h-[600px] w-auto object-cover rounded-2xl"
-              loading="lazy"
             />
           ))}
         </div>
@@ -265,7 +263,7 @@ const Index = () => {
       <section className="w-full bg-white py-[106px] md:py-[202px] lg:py-[266px] my-[150px]">
         <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
           <p
-            className="text-foreground text-3xl md:text-5xl lg:text-6xl xl:text-[68px] font-black leading-[110%] tracking-tight"
+            className="text-foreground text-2xl md:text-5xl lg:text-6xl xl:text-[68px] font-black leading-[110%] tracking-tight whitespace-nowrap"
             style={{ fontFamily: "Public Sans" }}
           >
             Modeln heute ist{" "}
@@ -283,7 +281,7 @@ const Index = () => {
         <div className="w-full">
           <p
             data-scroll-text="deine-reise"
-            className="text-black font-bold text-5xl sm:text-5xl md:text-7xl lg:text-[118px] xl:text-[198px] leading-[110%] whitespace-nowrap"
+            className="text-black font-bold text-6xl sm:text-6xl md:text-7xl lg:text-[118px] xl:text-[198px] leading-[110%] whitespace-nowrap"
             style={{ 
               fontFamily: "norman-variable, sans-serif",
               transform: "translateX(var(--scroll-x, -100%))",
@@ -298,7 +296,7 @@ const Index = () => {
         <div className="w-full bg-black pt-8 pb-16 md:pt-12 md:pb-24 lg:pt-16 lg:pb-40">
           <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
             <h2
-              className="text-white font-bold text-4xl md:text-6xl lg:text-8xl xl:text-[148px] leading-[110%] mb-12 md:mb-24 lg:mb-32"
+              className="text-white font-bold text-6xl md:text-7xl lg:text-8xl xl:text-[148px] leading-[110%] mb-12 md:mb-24 lg:mb-32"
               style={{ fontFamily: "norman-variable, sans-serif" }}
             >
               Model Me
@@ -315,7 +313,7 @@ const Index = () => {
                 </p>
                 <div className="flex flex-col gap-4 md:gap-6 lg:gap-8 flex-1">
                   <p
-                    className="text-white text-2xl md:text-3xl lg:text-5xl xl:text-[68px] font-black leading-[110%]"
+                    className="text-white text-3xl md:text-3xl lg:text-5xl xl:text-[68px] font-black leading-[110%]"
                     style={{ fontFamily: "Public Sans" }}
                   >
                     Casting – dein Startmoment
@@ -338,7 +336,7 @@ const Index = () => {
                 </p>
                 <div className="flex flex-col gap-4 md:gap-6 lg:gap-8 flex-1">
                   <p
-                    className="text-white text-2xl md:text-3xl lg:text-5xl xl:text-[68px] font-black leading-[110%]"
+                    className="text-white text-3xl md:text-3xl lg:text-5xl xl:text-[68px] font-black leading-[110%]"
                     style={{ fontFamily: "Public Sans" }}
                   >
                     Training - gemeinsam wachsen
@@ -361,7 +359,7 @@ const Index = () => {
                 </p>
                 <div className="flex flex-col gap-4 md:gap-6 lg:gap-8 flex-1">
                   <p
-                    className="text-white text-2xl md:text-3xl lg:text-5xl xl:text-[68px] font-black leading-[110%]"
+                    className="text-white text-3xl md:text-3xl lg:text-5xl xl:text-[68px] font-black leading-[110%]"
                     style={{ fontFamily: "Public Sans" }}
                   >
                     Finale - die große Show
@@ -382,7 +380,7 @@ const Index = () => {
       <section className="w-full bg-white py-24 md:py-48 lg:py-64">
         <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
           <p
-            className="text-foreground font-bold text-5xl sm:text-5xl md:text-7xl lg:text-[118px] xl:text-[198px] leading-[110%] text-center mb-12 md:mb-24"
+            className="text-foreground font-bold text-6xl sm:text-6xl md:text-7xl lg:text-[118px] xl:text-[198px] leading-[110%] text-center mb-12 md:mb-24"
             style={{ fontFamily: "norman-variable, sans-serif" }}
           >
             Casting 2026
@@ -428,13 +426,13 @@ const Index = () => {
       <section className="w-full bg-white overflow-hidden relative pb-16 md:pb-24 lg:pb-32">
         {/* Text overlay */}
         <h2
-          className="absolute left-[50px] md:left-[148px] lg:left-[592px] bottom-[64px] md:bottom-[96px] lg:bottom-[144px] text-white text-7xl sm:text-7xl md:text-7xl lg:text-[118px] xl:text-[198px] font-bold leading-[110%] pointer-events-none z-10 whitespace-nowrap -mb-2 md:-mb-6 lg:-mb-8"
+          className="absolute left-[50px] md:left-[148px] lg:left-[592px] bottom-[58px] md:bottom-[96px] lg:bottom-[144px] text-white text-7xl sm:text-7xl md:text-7xl lg:text-[118px] xl:text-[198px] font-bold leading-[110%] pointer-events-none z-10 whitespace-nowrap -mb-2 md:-mb-6 lg:-mb-8"
           style={{ fontFamily: "norman-variable, sans-serif", mixBlendMode: "difference" }}
         >
           einfach du
         </h2>
         
-        <div className="w-full flex justify-between items-center">
+        <div className="w-full flex justify-between items-center px-4 md:px-0">
           {/* Video on left with overflow */}
           <div className="w-full lg:w-auto lg:flex-shrink-0 lg:mr-auto ml-0 md:ml-[-5%] lg:ml-[-5%]">
             <video
@@ -541,7 +539,7 @@ const Index = () => {
       <section id="faq" className="w-full bg-white pb-16 md:pb-24 lg:pb-32">
         <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
           <h2
-            className="text-foreground text-3xl md:text-4xl lg:text-5xl xl:text-[68px] font-black leading-[110%] mb-8 md:mb-12"
+            className="text-foreground text-6xl md:text-4xl lg:text-5xl xl:text-[68px] font-black leading-[110%] mb-8 md:mb-12"
             style={{ fontFamily: "Public Sans" }}
           >
             FAQ
@@ -614,7 +612,7 @@ const Index = () => {
       <section className="w-full bg-white mt-24 md:mt-32 lg:mt-48">
         <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
           <p
-            className="text-black font-bold text-4xl md:text-6xl lg:text-8xl xl:text-[148px] leading-[110%]"
+            className="text-black font-bold text-6xl md:text-6xl lg:text-8xl xl:text-[148px] leading-[110%]"
             style={{ fontFamily: "norman-variable, sans-serif" }}
           >
             Mediale
@@ -624,7 +622,7 @@ const Index = () => {
         <div className="w-full bg-black py-12 md:py-16 lg:py-24">
           <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
             <h2
-              className="text-white font-bold text-4xl md:text-6xl lg:text-8xl xl:text-[148px] leading-[110%] mb-12 md:mb-16 lg:mb-24"
+              className="text-white font-bold text-5xl md:text-6xl lg:text-8xl xl:text-[148px] leading-[110%] mb-12 md:mb-16 lg:mb-24"
               style={{ fontFamily: "norman-variable, sans-serif" }}
             >
               Berichterstattung
@@ -637,9 +635,9 @@ const Index = () => {
 
       {/* Partners Section */}
       <section className="w-full bg-black py-16 md:py-24 lg:py-32 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
+        <div className="max-w-7xl mx-auto">
           <h2
-            className="text-white text-3xl md:text-4xl lg:text-5xl xl:text-[68px] font-bold leading-[110%] tracking-tight mb-8 md:mb-12 lg:mb-16"
+            className="text-white text-3xl md:text-4xl lg:text-5xl xl:text-[68px] font-bold leading-[110%] tracking-tight mb-8 md:mb-12 lg:mb-16 px-4 md:px-8 lg:px-16"
             style={{ fontFamily: "Public Sans" }}
           >
             Unsere Partner
@@ -702,10 +700,10 @@ const Index = () => {
           <div className="flex flex-col md:flex-row justify-between items-start gap-6 md:gap-8 lg:gap-12">
             {/* Model Me and Tagline */}
             <div className="flex flex-col gap-2">
-              <span className="text-black font-bold text-lg md:text-xl lg:text-2xl" style={{ fontFamily: "Public Sans" }}>
+              <span className="text-black font-bold text-base md:text-xl lg:text-2xl" style={{ fontFamily: "Public Sans" }}>
                 Model Me
               </span>
-              <span className="font-inter text-lg md:text-xl lg:text-2xl font-light">
+              <span className="font-inter text-base md:text-xl lg:text-2xl font-light">
                 <span className="text-black">Nicht Perfekt? </span>
                 <span className="text-lime">Perfekt.</span>
               </span>
@@ -717,7 +715,7 @@ const Index = () => {
                 href="https://www.facebook.com/share/17oQdQzCmA/?mibextid=wwXIfr"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-black font-bold text-lg md:text-xl lg:text-2xl hover:text-lime transition-colors" 
+                className="text-black font-bold text-base md:text-xl lg:text-2xl hover:text-lime transition-colors" 
                 style={{ fontFamily: "Public Sans" }}
               >
                 Facebook
@@ -726,7 +724,7 @@ const Index = () => {
                 href="https://www.instagram.com/modelme.at?igsh=aHM1aWx4dmEwMGc4&utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-black font-bold text-lg md:text-xl lg:text-2xl hover:text-lime transition-colors" 
+                className="text-black font-bold text-base md:text-xl lg:text-2xl hover:text-lime transition-colors" 
                 style={{ fontFamily: "Public Sans" }}
               >
                 Instagram
@@ -738,17 +736,17 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mt-8 md:mt-12">
             {/* Left Navigation */}
             <div className="flex flex-col gap-3 md:gap-4">
-              <a href="#die-reise" className="text-black font-inter text-base md:text-lg lg:text-xl font-light hover:text-lime transition-colors">Die Reise</a>
-              <a href="#faq" className="text-black font-inter text-base md:text-lg lg:text-xl font-light hover:text-lime transition-colors">FAQ</a>
-              <a href="#impressionen" className="text-black font-inter text-base md:text-lg lg:text-xl font-light hover:text-lime transition-colors">Impressionen</a>
+              <a href="#die-reise" className="text-black font-inter text-sm md:text-lg lg:text-xl font-light hover:text-lime transition-colors">Die Reise</a>
+              <a href="#faq" className="text-black font-inter text-sm md:text-lg lg:text-xl font-light hover:text-lime transition-colors">FAQ</a>
+              <a href="#impressionen" className="text-black font-inter text-sm md:text-lg lg:text-xl font-light hover:text-lime transition-colors">Impressionen</a>
             </div>
 
             {/* Right Navigation */}
             <div className="flex flex-col gap-3 md:gap-4 md:items-end">
-              <a href="mailto:corinna.baumann@russmedia.com" className="text-black font-inter text-base md:text-lg lg:text-xl font-light underline">
+              <a href="mailto:corinna.baumann@russmedia.com" className="text-black font-inter text-sm md:text-lg lg:text-xl font-light underline">
                 Kontakt
               </a>
-              <a href="https://form.jotform.com/253023649691360" className="text-lime font-inter text-base md:text-lg lg:text-xl font-light underline">
+              <a href="https://form.jotform.com/253023649691360" className="text-lime font-inter text-sm md:text-lg lg:text-xl font-light underline">
                 Zum Casting anmelden
               </a>
             </div>
