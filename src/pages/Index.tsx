@@ -1,23 +1,48 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import ScrollingWords from "@/components/ScrollingWords";
-import heroBackground from "@/assets/hero-background-v2.png";
+import heroBackground from "@/assets/Jennifer_Teles_Model_Me_1.jpg";
 import volLogo from "@/assets/VOL_RGB.svg";
 import mouldMeLogo from "@/assets/ModelMe_sub_Negativ_Logo.svg";
 import volLogoFooter from "@/assets/VOL_RGB-footer.svg";
-import fashion1 from "@/assets/fashion-1.jpeg";
-import fashion2 from "@/assets/fashion-2.jpeg";
-import fashion3 from "@/assets/fashion-3.jpeg";
-import fashion4 from "@/assets/fashion-4.jpeg";
-import fashion5 from "@/assets/fashion-5.jpeg";
-import fashion6 from "@/assets/fashion-6.jpeg";
-import fashion7 from "@/assets/fashion-7.jpeg";
-import testimonialRunway from "@/assets/testimonial-runway.jpeg";
+import fashion1 from "@/assets/bilder-neu/0F8A0577.jpg";
+import fashion2 from "@/assets/bilder-neu/0F8A2417.jpg";
+import fashion3 from "@/assets/bilder-neu/0F8A2610.jpg";
+import fashion4 from "@/assets/bilder-neu/0F8A2684.jpg";
+import fashion5 from "@/assets/bilder-neu/0F8A3074.jpg";
+import fashion6 from "@/assets/bilder-neu/0F8A4633.jpg";
+import fashion7 from "@/assets/bilder-neu/0F8A6037.jpg";
+import testimonialRunway from "@/assets/0F8A5164.jpg";
 import bubblesImg from "@/assets/bubbles.png";
 import kreisImg from "@/assets/kreis.png";
 import arrowDown from "@/assets/Arrow_Down.svg";
 import arrowUp from "@/assets/Arrow_Up.svg";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import ArticleListSection from "@/components/ArticleListSection";
+
+// Partner logos
+import logo1 from "@/assets/logos/imgi_4_vn_farbig-1920w.png";
+import logo2 from "@/assets/logos/imgi_5_Vol.at-1920w.jpg";
+import logo3 from "@/assets/logos/imgi_6_1000x1000px-1920w.jpg";
+import logo4 from "@/assets/logos/imgi_7_bURGER-684960cc-1920w.jpg";
+import logo5 from "@/assets/logos/imgi_8_Mike-Galeli-bb85eab2-1920w.jpg";
+import logo6 from "@/assets/logos/imgi_9_RedBull_Logo-dbe4d092-1920w.png";
+import logo7 from "@/assets/logos/imgi_10_Black_BG-d812a03d-1920w.jpg";
+import logo8 from "@/assets/logos/imgi_11_MO_Catering-1920w.png";
+import logo9 from "@/assets/logos/imgi_12_Logo_1000x1000px-1920w.jpg";
+import logo10 from "@/assets/logos/imgi_14_team-agentur-logo-rgb.pngneu-1920w.png";
+import logo11 from "@/assets/logos/imgi_15_Logo_black-1920w.jpg";
+import logo12 from "@/assets/logos/imgi_16_Lenz_Trachtenmode_Logo-1920w.png";
+import logo13 from "@/assets/logos/imgi_17_mango-1920w.jpg";
+import logo14 from "@/assets/logos/imgi_18_Claus_Tyler_Logo-1920w.png";
+import logo15 from "@/assets/logos/imgi_19_NEU-1920w.png";
+import logo16 from "@/assets/logos/imgi_193_Petersturm_WEB-1920w.jpg";
+import logo17 from "@/assets/logos/imgi_194_JUKLhealth-Logo-mit-untertitel_black-1920w.png";
+import logo18 from "@/assets/logos/imgi_195_Black_BG-1920w.jpg";
+import logo19 from "@/assets/logos/imgi_20_balck-wihte-1920w.jpg";
+import logo20 from "@/assets/logos/imgi_21_Black_Wihte_Logo-1920w.jpg";
+import logo21 from "@/assets/logos/imgi_22_black-1920w.jpg";
+import logo22 from "@/assets/logos/imgi_23_WEB-1920w.jpg";
 
 const Index = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -27,8 +52,15 @@ const Index = () => {
     seconds: 0,
   });
 
+  // Partner logos array
+  const partnerLogos = [
+    logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8, logo9, logo10,
+    logo11, logo12, logo13, logo14, logo15, logo16, logo17, logo18, logo19, logo20,
+    logo21, logo22
+  ];
+
   useEffect(() => {
-    const targetDate = new Date("2026-02-19T00:00:00").getTime();
+    const targetDate = new Date("2026-02-19T17:00:00+01:00").getTime();
     const calculateTimeLeft = () => {
       const now = new Date().getTime();
       const difference = targetDate - now;
@@ -112,7 +144,7 @@ const Index = () => {
 
         {/* Hero Text - positioned at bottom */}
         <h1
-          className="absolute bottom-0.5 left-0 right-0 text-center text-white text-[clamp(2rem,10vw,200px)] px-4 md:pl-12 lg:pl-24 xl:pl-[400px]"
+          className="absolute bottom-0.5 left-0 right-0 text-center text-white text-[clamp(2rem,10vw,200px)] px-4 md:pl-12 lg:pl-24 xl:pl-[400px] -mb-2 md:-mb-6 lg:-mb-8"
           style={{
             fontFamily: "norman-variable, sans-serif",
             fontSize: "clamp(4rem, 10vw, 200px)",
@@ -162,9 +194,9 @@ const Index = () => {
       </section>
 
       {/* Horizontal Scrollable Image Gallery */}
-      <section className="w-full bg-white overflow-hidden relative pb-20 md:pb-34 pt-4 md:pt-0">
+      <section id="impressionen" className="w-full bg-white overflow-hidden relative pb-20 md:pb-34 pt-4 md:pt-0">
         <h2
-          className="absolute right-4 md:right-8 lg:right-16 xl:right-24 top-auto bottom-[calc(7rem+20px)] md:bottom-[calc(9rem+20px)] lg:bottom-[calc(12rem+20px)] xl:bottom-[calc(14rem+20px)] text-white text-4xl md:text-6xl lg:text-8xl xl:text-[148px] font-bold leading-[110%] pointer-events-none z-10"
+          className="absolute right-4 md:right-8 lg:right-16 xl:right-24 top-auto bottom-[calc(5rem-70px)] md:bottom-[calc(7rem-70px)] lg:bottom-[calc(9rem-70px)] xl:bottom-[calc(11rem-70px)] text-white text-4xl md:text-6xl lg:text-8xl xl:text-[148px] font-bold leading-[110%] pointer-events-none z-10"
           style={{ fontFamily: "norman-variable, sans-serif", mixBlendMode: "difference" }}
         >
           2025
@@ -187,7 +219,7 @@ const Index = () => {
         </div>
         
         {/* Gallery Buttons */}
-        <div className="w-full flex justify-center mt-[6rem]">
+        {/* <div className="w-full flex justify-center mt-[6rem]">
           <div className="flex flex-wrap gap-4 justify-center">
             <a
               href="#"
@@ -202,7 +234,7 @@ const Index = () => {
               Kennenlern-Videos
             </a>
           </div>
-        </div>
+        </div> */} 
       </section>
 
       {/* Modeln heute ist section */}
@@ -223,7 +255,7 @@ const Index = () => {
       </section>
 
       {/* Deine Reise bei section */}
-      <section className="w-full bg-white overflow-hidden">
+      <section id="die-reise" className="w-full bg-white overflow-hidden">
         <div className="w-full">
           <p
             data-scroll-text="deine-reise"
@@ -357,7 +389,7 @@ const Index = () => {
           {/* CTA Button */}
           <div className="flex justify-center mt-12 md:mt-24">
             <a
-              href="https://www.model-me.at/#Neu"
+              href="https://form.jotform.com/253023649691360"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex h-14 md:h-[67px] px-5 md:px-5 items-center justify-center rounded border-2 border-foreground text-foreground font-inter text-lg md:text-lg lg:text-[26px] font-bold leading-[110%] hover:bg-foreground hover:text-background transition-colors"
@@ -413,11 +445,10 @@ const Index = () => {
                 {/* Testimonial 1 */}
                 <div>
                   <p className="text-foreground font-inter text-base md:text-lg lg:text-[26px] font-light !leading-[1.3]">
-                    Model Me zeigt, dass Ausstrahlung wichtiger ist als Normen. Wir suchen Menschen, die
-                    Haltung haben – nicht Menschen, die in Vorgaben passen.
+                  „Bei Model Me geht es nicht darum, wie gut jemand in ein vorgegebenes Bild passt. Entscheidend ist die Persönlichkeit dahinter und die Geschichte, die jemand mitbringt. Vielfalt ist hier keine Ausnahme, sondern das Prinzip.“
                   </p>
                   <p className="text-foreground font-inter text-base md:text-lg lg:text-[26px] font-semibold mt-4 md:mt-5">
-                    Jurymitglied
+                    Tanja Schwendinger
                   </p>
                 </div>
 
@@ -481,7 +512,7 @@ const Index = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="w-full bg-white pb-16 md:pb-24 lg:pb-32">
+      <section id="faq" className="w-full bg-white pb-16 md:pb-24 lg:pb-32">
         <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
           <h2
             className="text-foreground text-3xl md:text-4xl lg:text-5xl xl:text-[68px] font-black leading-[110%] mb-8 md:mb-12"
@@ -579,47 +610,99 @@ const Index = () => {
       </section>
 
       {/* Partners Section */}
-      <section className="w-full bg-white py-16 md:py-24 lg:py-32">
+      <section className="w-full bg-black py-16 md:py-24 lg:py-32 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
           <h2
-            className="text-foreground text-3xl md:text-4xl lg:text-5xl xl:text-[68px] font-bold leading-[110%] tracking-tight mb-8 md:mb-12 lg:mb-16"
+            className="text-white text-3xl md:text-4xl lg:text-5xl xl:text-[68px] font-bold leading-[110%] tracking-tight mb-8 md:mb-12 lg:mb-16"
             style={{ fontFamily: "Public Sans" }}
           >
             Unsere Partner
           </h2>
-          <div className="flex items-center justify-center gap-4 md:gap-6 lg:gap-8">
-            <div className="w-32 md:w-48 lg:w-64 xl:w-[306px] h-16 md:h-20 lg:h-24 xl:h-[120px] bg-muted rounded" />
-            <div className="w-32 md:w-48 lg:w-64 xl:w-[306px] h-20 md:h-24 lg:h-28 xl:h-[148px] bg-muted rounded" />
-            <div className="w-16 md:w-20 lg:w-24 xl:w-[109px] h-20 md:h-24 lg:h-28 xl:h-[148px] bg-muted rounded" />
-            <div className="w-40 md:w-56 lg:w-80 xl:w-[416px] h-12 md:h-14 lg:h-16 xl:h-[98px] bg-muted rounded" />
+          <div className="relative w-full overflow-hidden">
+            <style>{`
+              @keyframes scroll-logos {
+                0% {
+                  transform: translateX(0);
+                }
+                100% {
+                  transform: translateX(-50%);
+                }
+              }
+              .logo-scroll {
+                animation: scroll-logos 60s linear infinite;
+              }
+              .logo-scroll:hover {
+                animation-play-state: paused;
+              }
+            `}</style>
+            <div className="flex items-center gap-1 md:gap-5 lg:gap-8 logo-scroll">
+              {/* First set of logos */}
+              {partnerLogos.map((logo, index) => (
+                <div 
+                  key={`first-${index}`} 
+                  className="flex-shrink-0 flex items-center justify-center"
+                >
+                  <img
+                    src={logo}
+                    alt={`Partner ${index + 1}`}
+                    className="h-16 md:h-20 lg:h-24 w-auto object-contain"
+                  />
+                </div>
+              ))}
+              {/* Duplicate set for seamless loop */}
+              {partnerLogos.map((logo, index) => (
+                <div 
+                  key={`second-${index}`} 
+                  className="flex-shrink-0 flex items-center justify-center"
+                >
+                  <img
+                    src={logo}
+                    alt={`Partner ${index + 1}`}
+                    className="h-16 md:h-20 lg:h-24 w-auto object-contain"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="w-full bg-black py-8 md:py-12 lg:py-16">
+      <footer className="w-full bg-whitepy-8 md:py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
           {/* Top Row */}
           <div className="flex flex-col md:flex-row justify-between items-start gap-6 md:gap-8 lg:gap-12">
             {/* Model Me and Tagline */}
             <div className="flex flex-col gap-2">
-              <span className="text-white font-bold text-lg md:text-xl lg:text-2xl" style={{ fontFamily: "Public Sans" }}>
+              <span className="text-black font-bold text-lg md:text-xl lg:text-2xl" style={{ fontFamily: "Public Sans" }}>
                 Model Me
               </span>
               <span className="font-inter text-lg md:text-xl lg:text-2xl font-light">
-                <span className="text-white">Nicht Perfekt? </span>
+                <span className="text-black">Nicht Perfekt? </span>
                 <span className="text-lime">Perfekt.</span>
               </span>
             </div>
 
             {/* Social Links */}
             <div className="flex gap-6 md:gap-8">
-              <span className="text-white font-bold text-lg md:text-xl lg:text-2xl" style={{ fontFamily: "Public Sans" }}>
+              <a 
+                href="https://www.facebook.com/share/17oQdQzCmA/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-black font-bold text-lg md:text-xl lg:text-2xl hover:text-lime transition-colors" 
+                style={{ fontFamily: "Public Sans" }}
+              >
                 Facebook
-              </span>
-              <span className="text-white font-bold text-lg md:text-xl lg:text-2xl" style={{ fontFamily: "Public Sans" }}>
+              </a>
+              <a 
+                href="https://www.instagram.com/modelme.at?igsh=aHM1aWx4dmEwMGc4&utm_source=qr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-black font-bold text-lg md:text-xl lg:text-2xl hover:text-lime transition-colors" 
+                style={{ fontFamily: "Public Sans" }}
+              >
                 Instagram
-              </span>
+              </a>
             </div>
           </div>
 
@@ -627,17 +710,17 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mt-8 md:mt-12">
             {/* Left Navigation */}
             <div className="flex flex-col gap-3 md:gap-4">
-              <span className="text-white font-inter text-base md:text-lg lg:text-xl font-light">Die Reise</span>
-              <span className="text-white font-inter text-base md:text-lg lg:text-xl font-light">FAQ</span>
-              <span className="text-white font-inter text-base md:text-lg lg:text-xl font-light">Impressionen</span>
+              <a href="#die-reise" className="text-black font-inter text-base md:text-lg lg:text-xl font-light hover:text-lime transition-colors">Die Reise</a>
+              <a href="#faq" className="text-black font-inter text-base md:text-lg lg:text-xl font-light hover:text-lime transition-colors">FAQ</a>
+              <a href="#impressionen" className="text-black font-inter text-base md:text-lg lg:text-xl font-light hover:text-lime transition-colors">Impressionen</a>
             </div>
 
             {/* Right Navigation */}
             <div className="flex flex-col gap-3 md:gap-4 md:items-end">
-              <a href="#" className="text-white font-inter text-base md:text-lg lg:text-xl font-light underline">
+              <a href="mailto:corinna.baumann@russmedia.com" className="text-black font-inter text-base md:text-lg lg:text-xl font-light underline">
                 Kontakt
               </a>
-              <a href="#" className="text-lime font-inter text-base md:text-lg lg:text-xl font-light underline">
+              <a href="https://form.jotform.com/253023649691360" className="text-lime font-inter text-base md:text-lg lg:text-xl font-light underline">
                 Zum Casting anmelden
               </a>
             </div>
@@ -650,9 +733,11 @@ const Index = () => {
 
           {/* Footer Bottom Text */}
           <div className="flex flex-col md:flex-row justify-center items-center gap-3 md:gap-6 lg:gap-12 mt-6 md:mt-8 text-center">
-            <span className="text-white font-inter text-xs md:text-sm lg:text-base font-light">Impressum</span>
-            <span className="text-white font-inter text-xs md:text-sm lg:text-base font-light">© 2026 Alle Rechte vorbehalten</span>
-            <span className="text-white font-inter text-xs md:text-sm lg:text-base font-light">Datenschutz</span>
+            <Link to="/impressum" className="text-black font-inter text-xs md:text-sm lg:text-base font-light hover:text-lime transition-colors">
+              Impressum & Datenschutz
+            </Link>
+            <span className="text-black font-inter text-xs md:text-sm lg:text-base font-light">© 2026 Alle Rechte vorbehalten</span>
+            <span className="text-black font-inter text-xs md:text-sm lg:text-base font-light">Russmedia Digital</span>
           </div>
         </div>
       </footer>
