@@ -137,24 +137,32 @@ const Index = () => {
   }, []);
 
   useEffect(() => {
+    let ticking = false;
+    
     const handleScroll = () => {
-      const galleryElement = document.querySelector('[data-gallery="horizontal-scroll"]');
-      if (galleryElement) {
-        const rect = galleryElement.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-        
-        // Calculate scroll progress when element is in viewport
-        if (rect.top < windowHeight && rect.bottom > 0) {
-          const progress = Math.max(0, Math.min(1, (windowHeight - rect.top) / (windowHeight + rect.height)));
-          // Calculate how much to translate (from 0% to negative percentage based on content width)
-          const maxScroll = galleryElement.scrollWidth - galleryElement.clientWidth;
-          const translateX = -(progress * maxScroll);
-          (galleryElement as HTMLElement).style.transform = `translateX(${translateX}px)`;
-        }
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const galleryElement = document.querySelector('[data-gallery="horizontal-scroll"]');
+          if (galleryElement) {
+            const rect = galleryElement.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            
+            // Calculate scroll progress when element is in viewport
+            if (rect.top < windowHeight && rect.bottom > 0) {
+              const progress = Math.max(0, Math.min(1, (windowHeight - rect.top) / (windowHeight + rect.height)));
+              // Calculate how much to translate - reduced speed by 0.5x multiplier
+              const maxScroll = galleryElement.scrollWidth - galleryElement.clientWidth;
+              const translateX = -(progress * maxScroll * 0.5);
+              (galleryElement as HTMLElement).style.transform = `translateX(${translateX}px)`;
+            }
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll(); // Initial call
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -244,7 +252,7 @@ const Index = () => {
         >
           Impressionen
         </h2>
-        <div data-gallery="horizontal-scroll" className="flex items-center gap-4 md:gap-6 lg:gap-[35px] px-4 md:px-8 lg:px-12 mb-8 md:mb-12" style={{ transition: 'transform 0.05s linear', willChange: 'transform' }}>
+        <div data-gallery="horizontal-scroll" className="flex items-center gap-4 md:gap-6 lg:gap-[35px] px-4 md:px-8 lg:px-12 mb-8 md:mb-12" style={{ willChange: 'transform' }}>
           {[fashion1, fashion2, fashion3, fashion4, fashion5, fashion6, fashion7].map((image, index) => (
             <img
               key={index}
