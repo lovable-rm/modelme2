@@ -101,6 +101,27 @@ const Index = () => {
 
   useEffect(() => {
     const handleScroll = () => {
+      const nichtPerfektElement = document.querySelector('[data-scroll-text="nicht-perfekt"]');
+      if (nichtPerfektElement) {
+        const rect = nichtPerfektElement.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        
+        // Calculate scroll progress when element is in viewport
+        if (rect.top < windowHeight && rect.bottom > 0) {
+          const progress = Math.max(0, Math.min(1, (windowHeight - rect.top) / (windowHeight + rect.height)));
+          const translateX = 30 + (progress * -150); // Start at 50% right, move to -150% left
+          (nichtPerfektElement as HTMLElement).style.transform = `translateX(${translateX}%)`;
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial call
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
       const galleryElement = document.querySelector('[data-gallery="horizontal-scroll"]');
       if (galleryElement) {
         const rect = galleryElement.getBoundingClientRect();
@@ -144,6 +165,7 @@ const Index = () => {
 
         {/* Hero Text - positioned at bottom */}
         <h1
+          data-scroll-text="nicht-perfekt"
           className="absolute bottom-0.5 left-0 right-0 text-center text-white text-[clamp(2rem,10vw,200px)] px-4 md:pl-12 lg:pl-24 xl:pl-[400px] -mb-2 md:-mb-6 lg:-mb-8"
           style={{
             fontFamily: "norman-variable, sans-serif",
@@ -153,6 +175,7 @@ const Index = () => {
             lineHeight: "110%",
             fontFeatureSettings: "'liga' off, 'clig' off",
             mixBlendMode: "exclusion",
+            transition: "transform 0.05s linear",
           }}
         >
           Nicht Perfekt?
@@ -404,7 +427,7 @@ const Index = () => {
       <section className="w-full bg-white overflow-hidden relative pb-16 md:pb-24 lg:pb-32">
         {/* Text overlay */}
         <h2
-          className="absolute left-[50px] md:left-[148px] lg:left-[592px] bottom-[64px] md:bottom-[96px] lg:bottom-[144px] text-white text-5xl sm:text-5xl md:text-7xl lg:text-[118px] xl:text-[198px] font-bold leading-[110%] pointer-events-none z-10 whitespace-nowrap"
+          className="absolute left-[50px] md:left-[148px] lg:left-[592px] bottom-[64px] md:bottom-[96px] lg:bottom-[144px] text-white text-7xl sm:text-7xl md:text-7xl lg:text-[118px] xl:text-[198px] font-bold leading-[110%] pointer-events-none z-10 whitespace-nowrap -mb-2 md:-mb-6 lg:-mb-8"
           style={{ fontFamily: "norman-variable, sans-serif", mixBlendMode: "difference" }}
         >
           einfach du
@@ -412,13 +435,13 @@ const Index = () => {
         
         <div className="w-full flex justify-between items-center">
           {/* Video on left with overflow */}
-          <div className="w-full lg:w-auto lg:flex-shrink-0 lg:mr-auto ml-[-10%] md:ml-[-15%] lg:ml-[-5%]">
+          <div className="w-full lg:w-auto lg:flex-shrink-0 lg:mr-auto ml-0 md:ml-[-5%] lg:ml-[-5%]">
             <video
               autoPlay
               loop
               muted
               playsInline
-              className="w-[140%] md:w-[120%] lg:w-[600px] xl:w-[800px] h-auto lg:h-[500px] xl:h-[650px] rounded-3xl object-cover"
+              className="w-full md:w-[110%] lg:w-[600px] xl:w-[800px] h-auto lg:h-[500px] xl:h-[650px] rounded-3xl object-cover"
             >
               <source src="/fuer AE Casino.mp4" type="video/mp4" />
             </video>
