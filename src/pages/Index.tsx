@@ -110,19 +110,6 @@ const Index = () => {
   useEffect(() => {
     let ticking = false;
     
-    // Set initial position FIRST (only on mobile)
-    const nichtPerfektElement = document.querySelector('[data-scroll-text="nicht-perfekt"]');
-    if (nichtPerfektElement && window.innerWidth < 768) {
-      const rect = nichtPerfektElement.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-      
-      if (rect.top < windowHeight && rect.bottom > 0) {
-        const progress = Math.max(0, Math.min(1, (windowHeight - rect.top) / (windowHeight + rect.height)));
-        const translateX = 30 + (progress * -110);
-        (nichtPerfektElement as HTMLElement).style.transform = `translateX(${translateX}%)`;
-      }
-    }
-    
     const handleScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
@@ -145,6 +132,7 @@ const Index = () => {
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // Initial call
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
