@@ -170,7 +170,7 @@ const Index = () => {
   return (
     <div className="w-full overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative min-h-screen w-full">
+      <section className="relative h-[70vh] md:min-h-screen w-full">
         <div
           className="absolute inset-0"
           style={{
@@ -675,7 +675,7 @@ const Index = () => {
                 }
               }
               .logo-scroll {
-                animation: scroll-logos 60s linear infinite;
+                animation: scroll-logos 40s linear infinite;
               }
               .logo-scroll:hover {
                 animation-play-state: paused;
