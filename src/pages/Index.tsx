@@ -190,7 +190,7 @@ const Index = () => {
         {/* Hero Text - positioned at bottom */}
         <h1
           data-scroll-text="nicht-perfekt"
-          className="absolute bottom-0.5 left-0 right-0 text-center text-white text-[80px] md:text-7xl lg:text-[118px] xl:text-[200px] px-4 md:pl-12 lg:pl-24 xl:pl-[400px] -mb-2 md:-mb-6 lg:-mb-8 whitespace-nowrap"
+          className="absolute bottom-0.5 left-0 right-0 text-right md:text-center text-white text-[80px] md:text-7xl lg:text-[118px] xl:text-[200px] px-4 md:pl-12 lg:pl-24 xl:pl-[400px] -mb-2 md:-mb-6 lg:-mb-8 whitespace-nowrap"
           style={{
             fontFamily: "norman-variable, sans-serif",
             fontStyle: "normal",
@@ -198,7 +198,6 @@ const Index = () => {
             lineHeight: "110%",
             fontFeatureSettings: "'liga' off, 'clig' off",
             mixBlendMode: "exclusion",
-            transform: window.innerWidth < 768 ? 'translateX(30%)' : 'none', // Initial position for mobile
           }}
         >
           Nicht Perfekt?
