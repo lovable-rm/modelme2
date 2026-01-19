@@ -198,7 +198,7 @@ const Index = () => {
             lineHeight: "110%",
             fontFeatureSettings: "'liga' off, 'clig' off",
             mixBlendMode: "exclusion",
-            transform: "translateX(30%)",
+            transform: window.innerWidth < 768 ? 'translateX(30%)' : 'none', // Initial position for mobile
           }}
         >
           Nicht Perfekt?
