@@ -286,7 +286,7 @@ const Index = () => {
       <section className="w-full bg-white py-[106px] md:py-[202px] lg:py-[266px] my-[150px]">
         <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
           <p
-            className="text-foreground text-[29px] md:text-5xl lg:text-6xl xl:text-[68px] font-black leading-[110%] tracking-tight whitespace-nowrap"
+            className="text-foreground text-[27px] md:text-5xl lg:text-6xl xl:text-[68px] font-black leading-[110%] tracking-tight whitespace-nowrap"
             style={{ fontFamily: "Public Sans" }}
           >
             Modeln heute ist{" "}
@@ -294,6 +294,7 @@ const Index = () => {
               words={["anders", "individuell", "ausdrucksstark", "einfach du"]} 
               className="text-lime font-bold"
               style={{ fontFamily: "norman-variable, sans-serif" }}
+              mobileBottom="-1px"
             />
           </p>
         </div>

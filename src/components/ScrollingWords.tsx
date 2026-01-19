@@ -4,12 +4,25 @@ interface ScrollingWordsProps {
   words: string[];
   className?: string;
   style?: React.CSSProperties;
+  mobileBottom?: string;
 }
 
-const ScrollingWords = ({ words, className = "", style }: ScrollingWordsProps) => {
+const ScrollingWords = ({ words, className = "", style, mobileBottom }: ScrollingWordsProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [transitionEnabled, setTransitionEnabled] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -34,11 +47,12 @@ const ScrollingWords = ({ words, className = "", style }: ScrollingWordsProps) =
   }, [words.length]);
 
   const nextIndex = (currentIndex + 1) % words.length;
+  const bottomValue = isMobile && mobileBottom ? mobileBottom : '-0.05em';
 
   return (
     <span 
       className={`relative inline-block overflow-hidden ${className}`} 
-      style={{ height: '1.2em', bottom: '-0.05em', left: '0.08em', ...style }}
+      style={{ height: '1.2em', bottom: bottomValue, left: '0.08em', ...style }}
     >
       <span className="invisible">{words.reduce((a, b) => a.length > b.length ? a : b)}.</span>
       <span 
