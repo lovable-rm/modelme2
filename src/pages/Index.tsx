@@ -21,28 +21,28 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import ArticleListSection from "@/components/ArticleListSection";
 
 // Partner logos
-import logo1 from "@/assets/logos/imgi_4_vn_farbig-1920w.png";
-import logo2 from "@/assets/logos/imgi_5_Vol.at-1920w.jpg";
-import logo3 from "@/assets/logos/imgi_6_1000x1000px-1920w.jpg";
-import logo4 from "@/assets/logos/imgi_7_bURGER-684960cc-1920w.jpg";
-import logo5 from "@/assets/logos/imgi_8_Mike-Galeli-bb85eab2-1920w.jpg";
-import logo6 from "@/assets/logos/imgi_9_RedBull_Logo-dbe4d092-1920w.png";
-import logo7 from "@/assets/logos/imgi_10_Black_BG-d812a03d-1920w.jpg";
-import logo8 from "@/assets/logos/imgi_11_MO_Catering-1920w.png";
-import logo9 from "@/assets/logos/imgi_12_Logo_1000x1000px-1920w.jpg";
-import logo10 from "@/assets/logos/imgi_14_team-agentur-logo-rgb.pngneu-1920w.png";
-import logo11 from "@/assets/logos/imgi_15_Logo_black-1920w.jpg";
-import logo12 from "@/assets/logos/imgi_16_Lenz_Trachtenmode_Logo-1920w.png";
-import logo13 from "@/assets/logos/imgi_17_mango-1920w.jpg";
-import logo14 from "@/assets/logos/imgi_18_Claus_Tyler_Logo-1920w.png";
-import logo15 from "@/assets/logos/imgi_19_NEU-1920w.png";
-import logo16 from "@/assets/logos/imgi_193_Petersturm_WEB-1920w.jpg";
-import logo17 from "@/assets/logos/imgi_194_JUKLhealth-Logo-mit-untertitel_black-1920w.png";
-import logo18 from "@/assets/logos/imgi_195_Black_BG-1920w.jpg";
-import logo19 from "@/assets/logos/imgi_20_balck-wihte-1920w.jpg";
-import logo20 from "@/assets/logos/imgi_21_Black_Wihte_Logo-1920w.jpg";
-import logo21 from "@/assets/logos/imgi_22_black-1920w.jpg";
-import logo22 from "@/assets/logos/imgi_23_WEB-1920w.jpg";
+import logo1 from "@/assets/logos/imgi_4_vn_farbig-500w.png";
+import logo2 from "@/assets/logos/imgi_5_Vol.at-500w.png";
+import logo3 from "@/assets/logos/imgi_6_1000x1000px-500w.png";
+import logo4 from "@/assets/logos/imgi_7_bURGER-684960cc-500w.png";
+import logo5 from "@/assets/logos/imgi_8_Mike-Galeli-bb85eab2-500w.png";
+import logo6 from "@/assets/logos/imgi_9_RedBull_Logo-dbe4d092-500w.png";
+import logo7 from "@/assets/logos/imgi_10_Black_BG-d812a03d-500w.png";
+import logo8 from "@/assets/logos/imgi_11_MO_Catering-500w.png";
+import logo9 from "@/assets/logos/imgi_12_Logo_1000x1000px-500w.png";
+import logo10 from "@/assets/logos/imgi_14_team-agentur-logo-rgb.pngneu-500w.png";
+import logo11 from "@/assets/logos/imgi_15_Logo_black-500w.png";
+import logo12 from "@/assets/logos/imgi_16_Lenz_Trachtenmode_Logo-500w.png";
+import logo13 from "@/assets/logos/imgi_17_mango-500w.png";
+import logo14 from "@/assets/logos/imgi_18_Claus_Tyler_Logo-500w.png";
+import logo15 from "@/assets/logos/imgi_19_NEU-500w.png";
+import logo16 from "@/assets/logos/imgi_193_Petersturm_WEB-500w.png";
+import logo17 from "@/assets/logos/imgi_194_JUKLhealth-Logo-mit-untertitel_black-500w.png";
+import logo18 from "@/assets/logos/imgi_195_Black_BG-500w.png";
+import logo19 from "@/assets/logos/imgi_20_balck-wihte-500w.png";
+import logo20 from "@/assets/logos/imgi_21_Black_Wihte_Logo-500w.png";
+import logo21 from "@/assets/logos/imgi_22_black-500w.png";
+import logo22 from "@/assets/logos/imgi_23_WEB-500w.png";
 
 const Index = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -511,7 +511,7 @@ const Index = () => {
                 {/* Testimonial 3 */}
                 <div>
                   <p className="text-foreground font-inter text-base md:text-lg lg:text-[26px] font-light !leading-[1.3]">
-                  „Lorem Ipsum - Zitat folgt noch“
+                  „Ich stand lieber im Schatten, als sichtbar zu sein. Heute weiß ich,wer nicht wagt, findet keinen Weg und manchmal beginnt alles mit dem Glauben eines Menschen an dich. Man wächst nicht im Schatten, sondern dort, wo man sich zeigt.“
                   </p>
                   <p className="text-foreground font-inter text-base md:text-lg lg:text-[26px] font-semibold mt-4 md:mt-5">
                   Jennifer Teles, Model Me Gewinnerin 2025
@@ -571,7 +571,7 @@ const Index = () => {
             {[
               {
                 question: "Wer kann bei Model Me mitmachen?",
-                answer: "Jede:r. Größe, Alter oder Erfahrung spielen keine Rolle. Entscheidend ist, dass du du selbst bist.",
+                answer: "Größe, Alter oder Erfahrung spielen keine Rolle. Entscheidend ist, dass du du selbst bist.",
               },
               {
                 question: "Brauche ich professionelle Fotos?",
@@ -595,11 +595,11 @@ const Index = () => {
               },
               {
                 question: "Wie läuft das Finale ab?",
-                answer: "Das Programm endet mit einer Show in der Otten Gravour in Hohenems. Dort werden die Gewinner:innen gekürt.",
+                answer: "Das Programm endet mit einer Show. Dort werden die Gewinner:innen gekürt.",
               },
               {
                 question: "Was kann ich gewinnen?",
-                answer: "Ein:e Teilnehmer:in erhält einen Modelvertrag mit der TEAM AGENTUR und läuft bei den Düsseldorf Fashion Days für Mike Galeli.",
+                answer: "Ein:e Teilnehmer:in erhält einen Modelvertrag mit der TEAM AGENTUR.",
               },
               {
                 question: "Kann ich mich mehrfach bewerben?",
