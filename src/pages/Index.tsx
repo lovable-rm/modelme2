@@ -113,6 +113,12 @@ const Index = () => {
     const handleScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
+          // Only apply on mobile
+          if (window.innerWidth >= 768) {
+            ticking = false;
+            return;
+          }
+          
           const nichtPerfektElement = document.querySelector('[data-scroll-text="nicht-perfekt"]');
           if (nichtPerfektElement) {
             const rect = nichtPerfektElement.getBoundingClientRect();
@@ -123,6 +129,7 @@ const Index = () => {
               const progress = Math.max(0, Math.min(1, (windowHeight - rect.top) / (windowHeight + rect.height)));
               const translateX = 30 + (progress * -110); // Start at 30% right, move to -120% left
               (nichtPerfektElement as HTMLElement).style.transform = `translateX(${translateX}%)`;
+              (nichtPerfektElement as HTMLElement).style.willChange = 'transform';
             }
           }
           ticking = false;
@@ -131,9 +138,26 @@ const Index = () => {
       }
     };
 
+    // Set initial position
+    const setInitialPosition = () => {
+      if (window.innerWidth < 768) {
+        const nichtPerfektElement = document.querySelector('[data-scroll-text="nicht-perfekt"]');
+        if (nichtPerfektElement) {
+          (nichtPerfektElement as HTMLElement).style.transform = 'translateX(30%)';
+          (nichtPerfektElement as HTMLElement).style.willChange = 'transform';
+        }
+      }
+    };
+
+    setInitialPosition();
     window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', setInitialPosition);
     handleScroll(); // Initial call
-    return () => window.removeEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', setInitialPosition);
+    };
   }, []);
 
   useEffect(() => {
