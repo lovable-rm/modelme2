@@ -170,7 +170,7 @@ const Index = () => {
   return (
     <div className="w-full overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative h-[90vh] md:min-h-screen w-full">
+      <section className="relative h-[80vh] md:min-h-screen w-full">
         <div
           className="absolute inset-0"
           style={{
