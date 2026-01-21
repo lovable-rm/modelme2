@@ -175,8 +175,9 @@ const Index = () => {
           className="absolute inset-0"
           style={{
             backgroundImage: `url(${heroBackground})`,
-            backgroundSize: "cover",
-            backgroundPosition: "50% 20%",
+            backgroundSize: "80%",
+            backgroundPosition: "center 20%",
+            backgroundRepeat: "no-repeat",
           }}
         />
         
