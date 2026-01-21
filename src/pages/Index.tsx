@@ -84,18 +84,18 @@ const Index = () => {
     const handleScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
-          const scrollElement = document.querySelector('[data-scroll-text="deine-reise"]');
-          if (scrollElement) {
-            const rect = scrollElement.getBoundingClientRect();
-            const windowHeight = window.innerHeight;
-            
-            // Calculate scroll progress when element is in viewport
-            if (rect.top < windowHeight && rect.bottom > 0) {
-              const progress = Math.max(0, Math.min(1, (windowHeight - rect.top) / (windowHeight + rect.height)));
-              const translateX = -100 + (progress * 200); // From -100% to 100%
-              (scrollElement as HTMLElement).style.setProperty('--scroll-x', `${translateX}%`);
-            }
-          }
+      const scrollElement = document.querySelector('[data-scroll-text="deine-reise"]');
+      if (scrollElement) {
+        const rect = scrollElement.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        
+        // Calculate scroll progress when element is in viewport
+        if (rect.top < windowHeight && rect.bottom > 0) {
+          const progress = Math.max(0, Math.min(1, (windowHeight - rect.top) / (windowHeight + rect.height)));
+          const translateX = -100 + (progress * 200); // From -100% to 100%
+          (scrollElement as HTMLElement).style.setProperty('--scroll-x', `${translateX}%`);
+        }
+      }
           ticking = false;
         });
         ticking = true;
@@ -142,19 +142,19 @@ const Index = () => {
     const handleScroll = () => {
       if (!ticking) {
         window.requestAnimationFrame(() => {
-          const galleryElement = document.querySelector('[data-gallery="horizontal-scroll"]');
-          if (galleryElement) {
-            const rect = galleryElement.getBoundingClientRect();
-            const windowHeight = window.innerHeight;
-            
-            // Calculate scroll progress when element is in viewport
-            if (rect.top < windowHeight && rect.bottom > 0) {
-              const progress = Math.max(0, Math.min(1, (windowHeight - rect.top) / (windowHeight + rect.height)));
+      const galleryElement = document.querySelector('[data-gallery="horizontal-scroll"]');
+      if (galleryElement) {
+        const rect = galleryElement.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        
+        // Calculate scroll progress when element is in viewport
+        if (rect.top < windowHeight && rect.bottom > 0) {
+          const progress = Math.max(0, Math.min(1, (windowHeight - rect.top) / (windowHeight + rect.height)));
               // Calculate how much to translate - reduced speed by 0.5x multiplier
-              const maxScroll = galleryElement.scrollWidth - galleryElement.clientWidth;
+          const maxScroll = galleryElement.scrollWidth - galleryElement.clientWidth;
               const translateX = -(progress * maxScroll * 0.5);
-              (galleryElement as HTMLElement).style.transform = `translateX(${translateX}px)`;
-            }
+          (galleryElement as HTMLElement).style.transform = `translateX(${translateX}px)`;
+        }
           }
           ticking = false;
         });
@@ -175,9 +175,8 @@ const Index = () => {
           className="absolute inset-0"
           style={{
             backgroundImage: `url(${heroBackground})`,
-            backgroundSize: "80%",
-            backgroundPosition: "center 20%",
-            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "50% 20%",
           }}
         />
         
