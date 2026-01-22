@@ -657,6 +657,51 @@ const Index = () => {
       </section>
 
       {/* Partners Section */}
+      <section className="w-full bg-black py-16 md:py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
+          <h2
+            className="text-white text-3xl md:text-4xl lg:text-5xl xl:text-[68px] font-bold leading-[110%] tracking-tight mb-8 md:mb-12 lg:mb-16"
+            style={{ fontFamily: "Public Sans" }}
+          >
+            Unsere Partner
+          </h2>
+          {/* Static logo display */}
+          <div className="flex items-center justify-center gap-8 md:gap-12 lg:gap-16 flex-wrap">
+            <img
+              src={logo1}
+              alt="VN Partner"
+              className="h-16 md:h-20 lg:h-24 w-auto object-contain"
+              loading="lazy"
+            />
+            <img
+              src={logo2}
+              alt="VOL.AT Partner"
+              className="h-16 md:h-20 lg:h-24 w-auto object-contain"
+              loading="lazy"
+            />
+            <img
+              src={logo10}
+              alt="Team Agentur Partner"
+              className="h-16 md:h-20 lg:h-24 w-auto object-contain"
+              loading="lazy"
+            />
+            <img
+              src={logo5}
+              alt="Mike Galeli Partner"
+              className="h-16 md:h-20 lg:h-24 w-auto object-contain"
+              loading="lazy"
+            />
+            <img
+              src={logo11}
+              alt="Partner"
+              className="h-16 md:h-20 lg:h-24 w-auto object-contain"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* COMMENTED OUT - Logo slider section (may be needed later)
       <section className="w-full bg-black py-16 md:py-24 lg:py-32 overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <h2
@@ -683,7 +728,6 @@ const Index = () => {
               }
             `}</style>
             <div className="flex items-center gap-1 md:gap-5 lg:gap-8 logo-scroll">
-              {/* First set of logos */}
               {partnerLogos.map((logo, index) => (
                 <div 
                   key={`first-${index}`} 
@@ -697,7 +741,6 @@ const Index = () => {
                   />
                 </div>
               ))}
-              {/* Duplicate set for seamless loop */}
               {partnerLogos.map((logo, index) => (
                 <div 
                   key={`second-${index}`} 
@@ -715,6 +758,7 @@ const Index = () => {
           </div>
         </div>
       </section>
+      */}
 
       {/* Footer */}
       <footer className="w-full bg-white py-6 md:py-8 lg:py-10">
