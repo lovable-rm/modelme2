@@ -388,9 +388,7 @@ const Index = () => {
                     Finale - die große Show
                   </p>
                   <p className="text-white font-inter text-base md:text-lg lg:text-xl xl:text-[26px] font-light !leading-[1.3] max-w-3xl">
-                    Der Höhepunkt ist die Award-Show am XX in der Otten Gravour in Hohenems. Dort werden die
-                    Gewinner:innen gekürt – und eine Person erhält den Modelvertrag mit der TEAM AGENTUR und
-                    läuft für Mike Galeli bei den Düsseldorf Fashion Days.
+                    Der Höhepunkt ist die Award-Show, dort wird die Gewinnerin oder der Gewinner gekürt – und eine Person erhält den Modelvertrag mit der TEAM AGENTUR.
                   </p>
                 </div>
               </div>
