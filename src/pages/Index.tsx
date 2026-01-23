@@ -388,7 +388,7 @@ const Index = () => {
                     Finale - die große Show
                   </p>
                   <p className="text-white font-inter text-base md:text-lg lg:text-xl xl:text-[26px] font-light !leading-[1.3] max-w-3xl">
-                    Der Höhepunkt ist die Award-Show, dort wird die Gewinnerin oder der Gewinner gekürt – und eine Person erhält den Modelvertrag mit der TEAM AGENTUR.
+                    Der Höhepunkt ist die Award-Show am 3. Juli in der Otten Gravour in Hohenems. Dort wird die Gewinnerin oder der Gewinner gekürt – und eine Person erhält den Modelvertrag mit der TEAM AGENTUR.
                   </p>
                 </div>
               </div>
@@ -594,7 +594,7 @@ const Index = () => {
               },
               {
                 question: "Wie läuft das Finale ab?",
-                answer: "Das Programm endet mit einer Show. Dort werden die Gewinner:innen gekürt.",
+                answer: "Das Programm endet mit einer Show in der Otten Gravour in Hohenems. Dort werden die Gewinner:innen gekürt.",
               },
               {
                 question: "Was kann ich gewinnen?",
