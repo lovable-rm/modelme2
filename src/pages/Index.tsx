@@ -695,6 +695,12 @@ const Index = () => {
               className="h-16 md:h-20 lg:h-24 w-auto object-contain"
               loading="lazy"
             />
+            <img
+              src={logo17}
+              alt="JUKL Health Partner"
+              className="h-16 md:h-20 lg:h-24 w-auto object-contain"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
