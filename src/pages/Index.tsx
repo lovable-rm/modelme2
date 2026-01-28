@@ -241,7 +241,53 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Infinite Scrolling Banner */}
+      {/* Casting 2026 Section */}
+      <section className="w-full bg-white pt-8 md:pt-12 lg:pt-16 pb-24 md:pb-48 lg:pb-64">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
+          <p
+            className="text-foreground font-bold text-6xl sm:text-6xl md:text-7xl lg:text-[118px] xl:text-[198px] leading-[110%] text-center mb-12 md:mb-24"
+            style={{ fontFamily: "norman-variable, sans-serif" }}
+          >
+            Casting 2026
+          </p>
+
+          {/* Countdown */}
+          <div className="flex justify-center gap-4 md:gap-8 lg:gap-10 flex-wrap">
+            {[
+              { value: timeLeft.days, label: "TAGE" },
+              { value: timeLeft.hours, label: "STUNDEN" },
+              { value: timeLeft.minutes, label: "MINUTEN" },
+              { value: timeLeft.seconds, label: "SEKUNDEN" },
+            ].map((item, index) => (
+              <div key={index} className="flex flex-col items-center">
+                <p
+                  className="text-foreground text-5xl md:text-5xl lg:text-[68px] font-black leading-[100%]"
+                  style={{ fontFamily: "Public Sans" }}
+                >
+                  {item.value}
+                </p>
+                <p className="text-foreground font-inter text-base md:text-lg lg:text-[26px] font-light uppercase">
+                  {item.label}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA Button */}
+          <div className="flex justify-center mt-12 md:mt-24">
+            <a
+              href="https://form.jotform.com/253023649691360"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-14 md:h-[67px] px-5 md:px-5 items-center justify-center rounded border-2 border-foreground text-foreground font-inter text-lg md:text-lg lg:text-[26px] font-bold leading-[110%] hover:bg-foreground hover:text-background transition-colors"
+            >
+              Jetzt anmelden
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* COMMENTED OUT - Infinite Scrolling Banner (may be needed later)
       <div className="bg-white/50 text-black py-2 overflow-hidden">
         <style>{`
           @keyframes scroll-banner {
@@ -265,6 +311,7 @@ const Index = () => {
           </span>
         </div>
       </div>
+      */}
 
       {/* Horizontal Scrollable Image Gallery */}
       <section id="impressionen" className="w-full bg-white overflow-hidden relative pb-20 md:pb-34 pt-4 md:pt-0">
@@ -425,54 +472,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Casting 2026 Section */}
-      <section className="w-full bg-white py-24 md:py-48 lg:py-64">
-        <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
-          <p
-            className="text-foreground font-bold text-6xl sm:text-6xl md:text-7xl lg:text-[118px] xl:text-[198px] leading-[110%] text-center mb-12 md:mb-24"
-            style={{ fontFamily: "norman-variable, sans-serif" }}
-          >
-            Casting 2026
-          </p>
-
-          {/* Countdown */}
-          <div className="flex justify-center gap-4 md:gap-8 lg:gap-10 flex-wrap">
-            {[
-              { value: timeLeft.days, label: "TAGE" },
-              { value: timeLeft.hours, label: "STUNDEN" },
-              { value: timeLeft.minutes, label: "MINUTEN" },
-              { value: timeLeft.seconds, label: "SEKUNDEN" },
-            ].map((item, index) => (
-              <div key={index} className="flex flex-col items-center">
-                <p
-                  className="text-foreground text-5xl md:text-5xl lg:text-[68px] font-black leading-[100%]"
-                  style={{ fontFamily: "Public Sans" }}
-                >
-                  {item.value}
-                </p>
-                <p className="text-foreground font-inter text-base md:text-lg lg:text-[26px] font-light uppercase">
-                  {item.label}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          {/* CTA Button */}
-          <div className="flex justify-center mt-12 md:mt-24">
-            <a
-              href="https://form.jotform.com/253023649691360"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex h-14 md:h-[67px] px-5 md:px-5 items-center justify-center rounded border-2 border-foreground text-foreground font-inter text-lg md:text-lg lg:text-[26px] font-bold leading-[110%] hover:bg-foreground hover:text-background transition-colors"
-            >
-              Jetzt anmelden
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* Video and Image Section with Text Overlay */}
-      <section className="w-full bg-white overflow-hidden relative pb-16 md:pb-24 lg:pb-32">
+      <section className="w-full bg-white overflow-hidden relative pb-16 md:pb-24 lg:pb-32 mt-24 md:mt-32 lg:mt-48">
         {/* Text overlay */}
         <h2
           className="absolute left-[50px] md:left-[148px] lg:left-[592px] bottom-[58px] md:bottom-[96px] lg:bottom-[144px] text-white text-7xl sm:text-7xl md:text-7xl lg:text-[118px] xl:text-[198px] font-bold leading-[110%] pointer-events-none z-10 whitespace-nowrap -mb-2 md:-mb-6 lg:-mb-8"
