@@ -181,10 +181,38 @@ const Index = () => {
         />
         
         {/* Header */}
-        <div className="absolute top-0 left-0 right-0 h-16 md:h-20 lg:h-[103px] bg-white/50 z-10" />
-        <div className="absolute top-0 left-0 right-0 h-16 md:h-20 lg:h-[103px] flex items-center justify-between px-4 md:px-8 lg:px-12 z-20">
-          {/* <img src={volLogo} alt="VOL.AT Logo" className="h-10 md:h-12 lg:h-16" /> */}
-          <img src={mouldMeLogo} alt="Mould Me Logo" className="h-10 md:h-12 lg:h-16 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
+        <div className="absolute top-0 left-0 right-0 z-50">
+          <div className="h-16 md:h-20 lg:h-[103px] bg-white/50">
+            <div className="h-full flex items-center justify-between px-4 md:px-8 lg:px-12">
+              {/* <img src={volLogo} alt="VOL.AT Logo" className="h-10 md:h-12 lg:h-16" /> */}
+              <img src={mouldMeLogo} alt="Mould Me Logo" className="h-10 md:h-12 lg:h-16 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
+            </div>
+          </div>
+          
+          {/* Infinite Scrolling Banner */}
+          <div className="bg-white/50 text-black py-2 overflow-hidden">
+            <style>{`
+              @keyframes scroll-banner {
+                0% {
+                  transform: translateX(0);
+                }
+                100% {
+                  transform: translateX(-50%);
+                }
+              }
+              .banner-scroll {
+                animation: scroll-banner 20s linear infinite;
+              }
+            `}</style>
+            <div className="flex whitespace-nowrap banner-scroll">
+              <span className="text-sm md:text-base lg:text-lg font-bold px-8" style={{ fontFamily: "Public Sans" }}>
+                Casting läuft - Jetzt bewerben! • Casting läuft - Jetzt bewerben! • Casting läuft - Jetzt bewerben! • Casting läuft - Jetzt bewerben! • Casting läuft - Jetzt bewerben! • Casting läuft - Jetzt bewerben! • 
+              </span>
+              <span className="text-sm md:text-base lg:text-lg font-bold px-8" style={{ fontFamily: "Public Sans" }}>
+                Casting läuft - Jetzt bewerben! • Casting läuft - Jetzt bewerben! • Casting läuft - Jetzt bewerben! • Casting läuft - Jetzt bewerben! • Casting läuft - Jetzt bewerben! • Casting läuft - Jetzt bewerben! • 
+              </span>
+            </div>
+          </div>
         </div>
 
         {/* Hero Text - positioned at bottom */}
