@@ -188,31 +188,6 @@ const Index = () => {
               <img src={mouldMeLogo} alt="Mould Me Logo" className="h-10 md:h-12 lg:h-16 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
             </div>
           </div>
-          
-          {/* Infinite Scrolling Banner */}
-          <div className="bg-white/50 text-black py-2 overflow-hidden">
-            <style>{`
-              @keyframes scroll-banner {
-                0% {
-                  transform: translateX(0);
-                }
-                100% {
-                  transform: translateX(-50%);
-                }
-              }
-              .banner-scroll {
-                animation: scroll-banner 20s linear infinite;
-              }
-            `}</style>
-            <div className="flex whitespace-nowrap banner-scroll">
-              <span className="text-sm md:text-base lg:text-lg font-bold px-8" style={{ fontFamily: "Public Sans" }}>
-                Casting läuft - Jetzt bewerben! • Casting läuft - Jetzt bewerben! • Casting läuft - Jetzt bewerben! • Casting läuft - Jetzt bewerben! • Casting läuft - Jetzt bewerben! • Casting läuft - Jetzt bewerben! • 
-              </span>
-              <span className="text-sm md:text-base lg:text-lg font-bold px-8" style={{ fontFamily: "Public Sans" }}>
-                Casting läuft - Jetzt bewerben! • Casting läuft - Jetzt bewerben! • Casting läuft - Jetzt bewerben! • Casting läuft - Jetzt bewerben! • Casting läuft - Jetzt bewerben! • Casting läuft - Jetzt bewerben! • 
-              </span>
-            </div>
-          </div>
         </div>
 
         {/* Hero Text - positioned at bottom */}
@@ -239,7 +214,7 @@ const Index = () => {
           <div></div>
           
           {/* Top Right */}
-          <div className="py-24 md:py-48 lg:py-64 flex flex-col items-end">
+          <div className="pt-24 md:pt-48 lg:pt-64 flex flex-col items-end">
             <h2
               className="text-lime font-bold text-6xl sm:text-6xl md:text-8xl lg:text-[148px] xl:text-[198px] leading-[110%] -mb-5"
               style={{ fontFamily: "norman-variable, sans-serif" }}
@@ -253,7 +228,7 @@ const Index = () => {
           </div>
           
           {/* Bottom Left */}
-          <div className="pb-8 md:pb-12 lg:pb-16">
+          <div className="pb-2 md:pb-3 lg:pb-4">
             <p className="font-inter text-foreground text-lg md:text-lg lg:text-[26px] font-light !leading-[1.3] max-w-2xl">
               <span className="text-pink font-bold">Model Me</span> stellt genau diese Menschen in den
               Mittelpunkt – Menschen mit Geschichte. Keine glatten Kataloggesichter, sondern Individualität,
@@ -265,6 +240,31 @@ const Index = () => {
           <div></div>
         </div>
       </section>
+
+      {/* Infinite Scrolling Banner */}
+      <div className="bg-white/50 text-black py-2 overflow-hidden">
+        <style>{`
+          @keyframes scroll-banner {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+          .banner-scroll {
+            animation: scroll-banner 20s linear infinite;
+          }
+        `}</style>
+        <div className="flex whitespace-nowrap banner-scroll">
+          <span className="text-sm md:text-base lg:text-lg font-bold px-8" style={{ fontFamily: "Public Sans" }}>
+            Casting läuft - Jetzt bewerben!  Casting läuft - Jetzt bewerben!  Casting läuft - Jetzt bewerben!  Casting läuft - Jetzt bewerben!  Casting läuft - Jetzt bewerben!  Casting läuft - Jetzt bewerben!  
+          </span>
+          <span className="text-sm md:text-base lg:text-lg font-bold px-8" style={{ fontFamily: "Public Sans" }}>
+            Casting läuft - Jetzt bewerben!  Casting läuft - Jetzt bewerben!  Casting läuft - Jetzt bewerben!  Casting läuft - Jetzt bewerben!  Casting läuft - Jetzt bewerben!  Casting läuft - Jetzt bewerben!  
+          </span>
+        </div>
+      </div>
 
       {/* Horizontal Scrollable Image Gallery */}
       <section id="impressionen" className="w-full bg-white overflow-hidden relative pb-20 md:pb-34 pt-4 md:pt-0">
