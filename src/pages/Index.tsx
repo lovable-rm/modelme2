@@ -736,6 +736,30 @@ const Index = () => {
               className="h-16 md:h-20 lg:h-24 w-auto object-contain"
               loading="lazy"
             />
+            <img
+              src={logo6}
+              alt="Red Bull Partner"
+              className="h-16 md:h-20 lg:h-24 w-auto object-contain"
+              loading="lazy"
+            />
+            <img
+              src={logo8}
+              alt="MO Catering Partner"
+              className="h-16 md:h-20 lg:h-24 w-auto object-contain"
+              loading="lazy"
+            />
+            <img
+              src={logo4}
+              alt="Burger Partner"
+              className="h-16 md:h-20 lg:h-24 w-auto object-contain"
+              loading="lazy"
+            />
+            <img
+              src={logo21}
+              alt="Partner"
+              className="h-16 md:h-20 lg:h-24 w-auto object-contain"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
