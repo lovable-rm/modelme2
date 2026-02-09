@@ -760,6 +760,24 @@ const Index = () => {
               className="h-16 md:h-20 lg:h-24 w-auto object-contain"
               loading="lazy"
             />
+            <img
+              src={logo3}
+              alt="Partner"
+              className="h-16 md:h-20 lg:h-24 w-auto object-contain"
+              loading="lazy"
+            />
+            <img
+              src={logo7}
+              alt="Partner"
+              className="h-16 md:h-20 lg:h-24 w-auto object-contain"
+              loading="lazy"
+            />
+            <img
+              src={logo13}
+              alt="Mango Partner"
+              className="h-16 md:h-20 lg:h-24 w-auto object-contain"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
