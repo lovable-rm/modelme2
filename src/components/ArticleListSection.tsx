@@ -14,10 +14,21 @@ interface APIArticle {
   id: number;
   title: { rendered: string };
   link: string;
-  featured_image_crops?: Array<{
-    aspect: string;
-    sizes: Array<{ src: string; w: number; h: number }>;
-  }>;
+  image_crops?: {
+    refs: Array<{
+      src: string;
+      r: string[];
+      og_img?: {
+        src: string;
+        w: number;
+        h: number;
+      };
+    }>;
+    defs: Array<{
+      r: string;
+      s: string[];
+    }>;
+  };
 }
 
 interface APIResponse {
@@ -43,14 +54,26 @@ const ArticleListSection: React.FC<ArticleListSectionProps> = ({
         const data: APIResponse = await response.json();
         
         const formattedArticles: Article[] = data.hits.map((hit) => {
-          // Get the first available image from featured_image_crops or use placeholder
+          // Get the first available image from image_crops or use placeholder
           let imageUrl = articlePlaceholder;
-          if (hit.featured_image_crops && hit.featured_image_crops.length > 0) {
-            const crop = hit.featured_image_crops[0];
-            if (crop.sizes && crop.sizes.length > 0) {
-              imageUrl = 'https://www.vol.at' + crop.sizes[0].src;
+          
+          if (hit.image_crops && hit.image_crops.refs && hit.image_crops.refs.length > 0) {
+            const firstRef = hit.image_crops.refs[0];
+            const firstDef = hit.image_crops.defs && hit.image_crops.defs.length > 0 ? hit.image_crops.defs[0] : null;
+            
+            if (firstRef.src && firstDef) {
+              // Replace {r} with the aspect ratio and {s} with the first size
+              const aspectRatio = firstDef.r;
+              const size = firstDef.s && firstDef.s.length > 0 ? firstDef.s[0] : '';
+              
+              if (size) {
+                const imagePath = firstRef.src.replace('{r}', aspectRatio).replace('{s}', size);
+                imageUrl = 'https://www.vol.at' + imagePath;
+              }
             }
           }
+
+          console.log('Article:', hit.title.rendered, 'Image URL:', imageUrl);
 
           return {
             id: hit.id,

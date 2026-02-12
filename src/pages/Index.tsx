@@ -539,7 +539,7 @@ const Index = () => {
                 {/* Testimonial 3 */}
                 <div>
                   <p className="text-foreground font-inter text-base md:text-lg lg:text-[26px] font-light !leading-[1.3]">
-                  „Ich stand lieber im Schatten, als sichtbar zu sein. Heute weiß ich,wer nicht wagt, findet keinen Weg und manchmal beginnt alles mit dem Glauben eines Menschen an dich. Man wächst nicht im Schatten, sondern dort, wo man sich zeigt.“
+                  „Ich stand lieber im Schatten, als sichtbar zu sein. Heute weiß ich, wer nicht wagt, findet keinen Weg und manchmal beginnt alles mit dem Glauben eines Menschen an dich. Man wächst nicht im Schatten, sondern dort, wo man sich zeigt.“
                   </p>
                   <p className="text-foreground font-inter text-base md:text-lg lg:text-[26px] font-semibold mt-4 md:mt-5">
                   Jennifer Teles, Model Me Gewinnerin 2025
@@ -599,7 +599,7 @@ const Index = () => {
             {[
               {
                 question: "Wer kann bei Model Me mitmachen?",
-                answer: "Größe, Alter oder Erfahrung spielen keine Rolle. Entscheidend ist, dass du du selbst bist.",
+                answer: "Teilnehmen kannst du, wenn du mindestens 18 Jahre alt bist.",
               },
               {
                 question: "Brauche ich professionelle Fotos?",
