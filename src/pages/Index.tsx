@@ -43,6 +43,7 @@ import logo19 from "@/assets/logos/imgi_20_balck-wihte-500w.png";
 import logo20 from "@/assets/logos/imgi_21_Black_Wihte_Logo-500w.png";
 import logo21 from "@/assets/logos/imgi_22_black-500w.png";
 import logo22 from "@/assets/logos/imgi_23_WEB-500w.png";
+import logoPush from "@/assets/logos/push-Logo-500w.png";
 
 const Index = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -775,6 +776,18 @@ const Index = () => {
             <img
               src={logo13}
               alt="Mango Partner"
+              className="h-16 md:h-20 lg:h-24 w-auto object-contain"
+              loading="lazy"
+            />
+            <img
+              src={logoPush}
+              alt="Push Partner"
+              className="h-16 md:h-20 lg:h-24 w-auto object-contain"
+              loading="lazy"
+            />
+            <img
+              src={logo20}
+              alt="Partner"
               className="h-16 md:h-20 lg:h-24 w-auto object-contain"
               loading="lazy"
             />
