@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import ScrollingWords from "@/components/ScrollingWords";
 import heroBackground from "@/assets/Jennifer_Teles_Model_Me_1.jpg";
@@ -46,38 +46,12 @@ import logo22 from "@/assets/logos/imgi_23_WEB-500w.png";
 import logoPush from "@/assets/logos/push-Logo-500w.png";
 
 const Index = () => {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
-
   // Partner logos array
   const partnerLogos = [
     logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8, logo9, logo10,
     logo11, logo12, logo13, logo14, logo15, logo16, logo17, logo18, logo19, logo20,
     logo21, logo22
   ];
-
-  useEffect(() => {
-    const targetDate = new Date("2026-02-19T17:00:00+01:00").getTime();
-    const calculateTimeLeft = () => {
-      const now = new Date().getTime();
-      const difference = targetDate - now;
-      if (difference > 0) {
-        setTimeLeft({
-          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-          minutes: Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
-          seconds: Math.floor((difference % (1000 * 60)) / 1000),
-        });
-      }
-    };
-    calculateTimeLeft();
-    const timer = setInterval(calculateTimeLeft, 1000);
-    return () => clearInterval(timer);
-  }, []);
 
   useEffect(() => {
     let ticking = false;
@@ -246,43 +220,26 @@ const Index = () => {
       <section className="w-full bg-white pt-8 md:pt-12 lg:pt-16 pb-24 md:pb-48 lg:pb-64">
         <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
           <p
-            className="text-foreground font-bold text-6xl sm:text-6xl md:text-7xl lg:text-[118px] xl:text-[198px] leading-[110%] text-center mb-12 md:mb-24"
+            className="text-foreground font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center max-w-6xl mx-auto mb-12 md:mb-24 flex flex-col items-center gap-y-4 md:gap-y-5 lg:gap-y-6"
             style={{ fontFamily: "norman-variable, sans-serif" }}
           >
-            Casting 2026
+            <span className="block leading-[1.2] [text-wrap:balance]">
+              Jetzt Tickets für das große Finale am
+            </span>
+            <span className="block leading-[1.2] [text-wrap:balance]">
+              3. Juli in der Otten Gravour sichern
+            </span>
           </p>
 
-          {/* Countdown */}
-          <div className="flex justify-center gap-4 md:gap-8 lg:gap-10 flex-wrap">
-            {[
-              { value: timeLeft.days, label: "TAGE" },
-              { value: timeLeft.hours, label: "STUNDEN" },
-              { value: timeLeft.minutes, label: "MINUTEN" },
-              { value: timeLeft.seconds, label: "SEKUNDEN" },
-            ].map((item, index) => (
-              <div key={index} className="flex flex-col items-center">
-                <p
-                  className="text-foreground text-5xl md:text-5xl lg:text-[68px] font-black leading-[100%]"
-                  style={{ fontFamily: "Public Sans" }}
-                >
-                  {item.value}
-                </p>
-                <p className="text-foreground font-inter text-base md:text-lg lg:text-[26px] font-light uppercase">
-                  {item.label}
-                </p>
-              </div>
-            ))}
-          </div>
-
           {/* CTA Button */}
-          <div className="flex justify-center mt-12 md:mt-24">
+          <div className="flex justify-center mt-16 md:mt-28">
             <a
-              href="https://form.jotform.com/253023649691360"
+              href="https://www.eventbrite.at/e/model-me-finale-2026-tickets-1980367037118?aff=oddtdtcreator"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex h-14 md:h-[67px] px-5 md:px-5 items-center justify-center rounded border-2 border-foreground text-foreground font-inter text-lg md:text-lg lg:text-[26px] font-bold leading-[110%] hover:bg-foreground hover:text-background transition-colors"
             >
-              Jetzt anmelden
+              Jetzt Ticket sichern
             </a>
           </div>
         </div>
