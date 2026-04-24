@@ -29,29 +29,39 @@ import logo5 from "@/assets/logos/imgi_8_Mike-Galeli-bb85eab2-500w.png";
 import logo6 from "@/assets/logos/imgi_9_RedBull_Logo-dbe4d092-500w.png";
 import logo7 from "@/assets/logos/imgi_10_Black_BG-d812a03d-500w.png";
 import logo8 from "@/assets/logos/imgi_11_MO_Catering-500w.png";
-import logo9 from "@/assets/logos/imgi_12_Logo_1000x1000px-500w.png";
 import logo10 from "@/assets/logos/imgi_14_team-agentur-logo-rgb.pngneu-500w.png";
 import logo11 from "@/assets/logos/imgi_15_Logo_black-500w.png";
 import logo12 from "@/assets/logos/imgi_16_Lenz_Trachtenmode_Logo-500w.png";
 import logo13 from "@/assets/logos/imgi_17_mango-500w.png";
 import logo14 from "@/assets/logos/imgi_18_Claus_Tyler_Logo-500w.png";
-import logo15 from "@/assets/logos/imgi_19_NEU-500w.png";
-import logo16 from "@/assets/logos/imgi_193_Petersturm_WEB-500w.png";
 import logo17 from "@/assets/logos/imgi_194_JUKLhealth-Logo-mit-untertitel_black-500w.png";
-import logo18 from "@/assets/logos/imgi_195_Black_BG-500w.png";
-import logo19 from "@/assets/logos/imgi_20_balck-wihte-500w.png";
 import logo20 from "@/assets/logos/imgi_21_Black_Wihte_Logo-500w.png";
 import logo21 from "@/assets/logos/imgi_22_black-500w.png";
-import logo22 from "@/assets/logos/imgi_23_WEB-500w.png";
 import logoPush from "@/assets/logos/push-Logo-500w.png";
 
 const Index = () => {
-  // Partner logos array
-  const partnerLogos = [
-    logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8, logo9, logo10,
-    logo11, logo12, logo13, logo14, logo15, logo16, logo17, logo18, logo19, logo20,
-    logo21, logo22
+  /** Partner strip order: vol.at → … → organics (matches asset files, not numeric logoN order). */
+  const partnerDisplayItems = [
+    { src: logo2, alt: "VOL.AT" },
+    { src: logo1, alt: "VN" },
+    { src: logo10, alt: "Team Agentur" },
+    { src: logo12, alt: "Lenz Trachtenmode" },
+    { src: logo3, alt: "Façona Fashion" },
+    { src: logo13, alt: "Mango" },
+    { src: logo14, alt: "Claus Tyler" },
+    { src: logo5, alt: "Mike Galeli" },
+    { src: logo11, alt: "Magic Fit Dornbirn" },
+    { src: logo17, alt: "JUKL Health" },
+    { src: logo4, alt: "Dr. Burger & Partner" },
+    { src: logo8, alt: "MO Catering" },
+    { src: logo21, alt: "PeterLine ShowTech" },
+    { src: logo20, alt: "Kinky" },
+    { src: logoPush, alt: "Push" },
+    { src: logo7, alt: "Italicus" },
+    { src: logo6, alt: "The Organics by Red Bull" },
   ];
+
+  const partnerLogos = partnerDisplayItems.map((item) => item.src);
 
   useEffect(() => {
     let ticking = false;
@@ -650,104 +660,16 @@ const Index = () => {
           >
             Unsere Partner
           </h2>
-          {/* Static logo display */}
           <div className="flex items-center justify-center gap-8 md:gap-12 lg:gap-16 flex-wrap">
-            <img
-              src={logo1}
-              alt="VN Partner"
-              className="h-16 md:h-20 lg:h-24 w-auto object-contain"
-              loading="lazy"
-            />
-            <img
-              src={logo2}
-              alt="VOL.AT Partner"
-              className="h-16 md:h-20 lg:h-24 w-auto object-contain"
-              loading="lazy"
-            />
-            <img
-              src={logo10}
-              alt="Team Agentur Partner"
-              className="h-16 md:h-20 lg:h-24 w-auto object-contain"
-              loading="lazy"
-            />
-            <img
-              src={logo5}
-              alt="Mike Galeli Partner"
-              className="h-16 md:h-20 lg:h-24 w-auto object-contain"
-              loading="lazy"
-            />
-            <img
-              src={logo11}
-              alt="Partner"
-              className="h-16 md:h-20 lg:h-24 w-auto object-contain"
-              loading="lazy"
-            />
-            <img
-              src={logo17}
-              alt="JUKL Health Partner"
-              className="h-16 md:h-20 lg:h-24 w-auto object-contain"
-              loading="lazy"
-            />
-            <img
-              src={logo14}
-              alt="Claus Tyler Partner"
-              className="h-16 md:h-20 lg:h-24 w-auto object-contain"
-              loading="lazy"
-            />
-            <img
-              src={logo6}
-              alt="Red Bull Partner"
-              className="h-16 md:h-20 lg:h-24 w-auto object-contain"
-              loading="lazy"
-            />
-            <img
-              src={logo8}
-              alt="MO Catering Partner"
-              className="h-16 md:h-20 lg:h-24 w-auto object-contain"
-              loading="lazy"
-            />
-            <img
-              src={logo4}
-              alt="Burger Partner"
-              className="h-16 md:h-20 lg:h-24 w-auto object-contain"
-              loading="lazy"
-            />
-            <img
-              src={logo21}
-              alt="Partner"
-              className="h-16 md:h-20 lg:h-24 w-auto object-contain"
-              loading="lazy"
-            />
-            <img
-              src={logo3}
-              alt="Partner"
-              className="h-16 md:h-20 lg:h-24 w-auto object-contain"
-              loading="lazy"
-            />
-            <img
-              src={logo7}
-              alt="Partner"
-              className="h-16 md:h-20 lg:h-24 w-auto object-contain"
-              loading="lazy"
-            />
-            <img
-              src={logo13}
-              alt="Mango Partner"
-              className="h-16 md:h-20 lg:h-24 w-auto object-contain"
-              loading="lazy"
-            />
-            <img
-              src={logoPush}
-              alt="Push Partner"
-              className="h-16 md:h-20 lg:h-24 w-auto object-contain"
-              loading="lazy"
-            />
-            <img
-              src={logo20}
-              alt="Partner"
-              className="h-16 md:h-20 lg:h-24 w-auto object-contain"
-              loading="lazy"
-            />
+            {partnerDisplayItems.map(({ src, alt }) => (
+              <img
+                key={alt}
+                src={src}
+                alt={alt}
+                className="h-16 md:h-20 lg:h-24 w-auto object-contain"
+                loading="lazy"
+              />
+            ))}
           </div>
         </div>
       </section>
