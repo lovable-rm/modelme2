@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import ScrollingWords from "@/components/ScrollingWords";
 import heroBackground from "@/assets/Jennifer_Teles_Model_Me_1.jpg";
-// import volLogo from "@/assets/VOL_RGB.svg";
+import volLogo from "@/assets/VOL_RGB.svg";
 import mouldMeLogo from "@/assets/ModelMe_sub_Negativ_Logo.svg";
 import volLogoFooter from "@/assets/VOL_RGB-footer.svg";
 import fashion1 from "@/assets/bilder-neu/0F8A0577.jpg";
@@ -169,7 +169,9 @@ const Index = () => {
         <div className="absolute top-0 left-0 right-0 z-50">
           <div className="h-16 md:h-20 lg:h-[103px] bg-white/50">
             <div className="h-full flex items-center justify-between px-4 md:px-8 lg:px-12">
-              {/* <img src={volLogo} alt="VOL.AT Logo" className="h-10 md:h-12 lg:h-16" /> */}
+              <a href="https://www.vol.at/" target="_blank" rel="noopener noreferrer">
+                <img src={volLogo} alt="VOL.AT Logo" className="h-8 md:h-10 lg:h-14" />
+              </a>
               <img src={mouldMeLogo} alt="Mould Me Logo" className="h-10 md:h-12 lg:h-16 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" />
             </div>
           </div>
@@ -227,17 +229,15 @@ const Index = () => {
       </section>
 
       {/* Casting 2026 Section */}
-      <section className="w-full bg-white pt-8 md:pt-12 lg:pt-16 pb-24 md:pb-48 lg:pb-64">
+      <section className="w-full bg-white pb-24 md:pb-48 lg:pb-64">
         <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-16">
           <p
-            className="text-foreground font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-center max-w-6xl mx-auto mb-12 md:mb-24 flex flex-col items-center gap-y-4 md:gap-y-5 lg:gap-y-6"
-            style={{ fontFamily: "norman-variable, sans-serif" }}
+            className="text-foreground font-black text-[22px] md:text-4xl lg:text-5xl xl:text-6xl text-center max-w-6xl mx-auto mb-12 md:mb-24 flex flex-col items-center gap-y-4 md:gap-y-5 lg:gap-y-6"
+            style={{ fontFamily: "Public Sans" }}
           >
-            <span className="block leading-[1.2] [text-wrap:balance]">
-              Jetzt Tickets für das große Finale am
-            </span>
-            <span className="block leading-[1.2] [text-wrap:balance]">
-              3. Juli in der Otten Gravour sichern
+            <span className="block leading-[1.2]">
+              Jetzt <span className="text-lime">Tickets</span> für das große <span className="text-lime">Finale</span> <br />
+              am <span className="text-lime">3. Juli</span> in der Otten Gravour sichern
             </span>
           </p>
 
@@ -435,6 +435,17 @@ const Index = () => {
                   </p>
                 </div>
               </div>
+
+              <div className="flex justify-center">
+                <a
+                  href="https://www.eventbrite.at/e/model-me-finale-2026-tickets-1980367037118?aff=oddtdtcreator"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex h-14 md:h-[67px] px-5 md:px-5 items-center justify-center rounded border-2 border-white text-white font-inter text-lg md:text-lg lg:text-[26px] font-bold leading-[110%] hover:bg-white hover:text-black transition-colors"
+                >
+                  Jetzt Ticket sichern
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -444,7 +455,7 @@ const Index = () => {
       <section className="w-full bg-white overflow-hidden relative pb-16 md:pb-24 lg:pb-32 mt-24 md:mt-32 lg:mt-48">
         {/* Text overlay */}
         <h2
-          className="absolute left-[50px] md:left-[148px] lg:left-[592px] bottom-[58px] md:bottom-[96px] lg:bottom-[144px] text-white text-7xl sm:text-7xl md:text-7xl lg:text-[118px] xl:text-[198px] font-bold leading-[110%] pointer-events-none z-10 whitespace-nowrap -mb-2 md:-mb-6 lg:-mb-8"
+          className="absolute left-[clamp(2rem,38vw,38rem)] bottom-12 md:bottom-[96px] lg:bottom-[144px] text-white text-[clamp(3.75rem,13vw,12.375rem)] font-bold leading-[110%] pointer-events-none z-10 whitespace-nowrap -mb-2 md:-mb-6 lg:-mb-8"
           style={{ fontFamily: "norman-variable, sans-serif", mixBlendMode: "difference" }}
         >
           einfach du
@@ -459,7 +470,7 @@ const Index = () => {
               muted
               playsInline
               preload="metadata"
-              className="w-full md:w-[110%] lg:w-[600px] xl:w-[800px] h-auto lg:h-[500px] xl:h-[650px] rounded-3xl object-cover"
+              className="w-full md:w-[110%] lg:w-[62vw] lg:max-w-[800px] h-auto lg:h-[min(50vw,650px)] rounded-3xl object-cover"
             >
               <source src="/fuer AE Casino.mp4" type="video/mp4" />
             </video>
@@ -541,14 +552,14 @@ const Index = () => {
               style={{ left: '5%', top: '-45%' }}
             />
             {/* Circle with text layer */}
-            <div className="absolute inset-0 flex items-center justify-center">
+            <a href="#faq" className="absolute inset-0 flex items-center justify-center">
               <img
                 src={kreisImg}
                 alt="Alle Antworten auf deine Fragen"
                 className="w-[60%] h-auto"
                 style={{ animation: "spin 20s linear infinite" }}
               />
-            </div>
+            </a>
           </div>
         </div>
       </section>
