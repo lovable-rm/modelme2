@@ -797,9 +797,11 @@ const Index = () => {
               <a href="mailto:corinna.baumann@russmedia.com" className="text-black font-inter text-sm md:text-lg lg:text-xl font-light underline">
                 Kontakt
               </a>
+              {/*
               <a href="https://form.jotform.com/253023649691360" className="text-lime font-inter text-sm md:text-lg lg:text-xl font-light underline">
                 Zum Casting anmelden
               </a>
+              */}
             </div>
           </div>
 
