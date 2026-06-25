@@ -38,6 +38,9 @@ import logo17 from "@/assets/logos/imgi_194_JUKLhealth-Logo-mit-untertitel_black
 import logo20 from "@/assets/logos/imgi_21_Black_Wihte_Logo-500w.png";
 import logo21 from "@/assets/logos/imgi_22_black-500w.png";
 import logoPush from "@/assets/logos/push-Logo-500w.png";
+import logoHerburgerReisen from "@/assets/logos/logo-herburger-reisen-500w.webp";
+import logoManuelPaul from "@/assets/logos/logo-manuelpaul-weiss-500w.webp";
+import logoSchneideRaum from "@/assets/logos/logo-schneide-raum-deluxe-500w.webp";
 
 const Index = () => {
   /** Partner strip order: vol.at → … → organics (matches asset files, not numeric logoN order). */
@@ -57,6 +60,9 @@ const Index = () => {
     { src: logo21, alt: "PeterLine ShowTech" },
     { src: logo20, alt: "Kinky" },
     { src: logoPush, alt: "Push" },
+    { src: logoHerburgerReisen, alt: "Herburger Reisen", className: "h-12 md:h-14 lg:h-16 w-auto object-contain" },
+    { src: logoManuelPaul, alt: "ManuelPaul", className: "h-8 md:h-10 lg:h-12 w-auto object-contain" },
+    { src: logoSchneideRaum, alt: "Schneide Raum Deluxe", className: "h-20 md:h-24 lg:h-28 w-auto object-contain" },
     { src: logo7, alt: "Italicus" },
     { src: logo6, alt: "The Organics by Red Bull" },
   ];
@@ -672,12 +678,12 @@ const Index = () => {
             Unsere Partner
           </h2>
           <div className="flex items-center justify-center gap-8 md:gap-12 lg:gap-16 flex-wrap">
-            {partnerDisplayItems.map(({ src, alt }) => (
+            {partnerDisplayItems.map(({ src, alt, className }) => (
               <img
                 key={alt}
                 src={src}
                 alt={alt}
-                className="h-16 md:h-20 lg:h-24 w-auto object-contain"
+                className={className ?? "h-16 md:h-20 lg:h-24 w-auto object-contain"}
                 loading="lazy"
               />
             ))}
