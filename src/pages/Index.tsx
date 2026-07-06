@@ -5,13 +5,14 @@ import heroBackground from "@/assets/Jennifer_Teles_Model_Me_1.jpg";
 import volLogo from "@/assets/VOL_RGB.svg";
 import mouldMeLogo from "@/assets/ModelMe_sub_Negativ_Logo.svg";
 import volLogoFooter from "@/assets/VOL_RGB-footer.svg";
-import fashion1 from "@/assets/bilder-neu/0F8A0577.jpg";
-import fashion2 from "@/assets/bilder-neu/0F8A2417.jpg";
-import fashion3 from "@/assets/bilder-neu/0F8A2610.jpg";
-import fashion4 from "@/assets/bilder-neu/0F8A2684.jpg";
-import fashion5 from "@/assets/bilder-neu/0F8A3074.jpg";
-import fashion6 from "@/assets/bilder-neu/0F8A4633.jpg";
-import fashion7 from "@/assets/bilder-neu/0F8A6037.jpg";
+import fashion1 from "@/assets/bilder-neu/0F8A6327.webp";
+import fashion2 from "@/assets/bilder-neu/0F8A6200.webp";
+import fashion3 from "@/assets/bilder-neu/0F8A6052.webp";
+import fashion4 from "@/assets/bilder-neu/0F8A5640.webp";
+import fashion5 from "@/assets/bilder-neu/0F8A5629.webp";
+import fashion6 from "@/assets/bilder-neu/0F8A5301.webp";
+import fashion7 from "@/assets/bilder-neu/0F8A4587.webp";
+import sinemDuvanImage from "@/assets/bilder-neu/0F8A7048.webp";
 import testimonialRunway from "@/assets/0F8A5164.jpg";
 import bubblesImg from "@/assets/bubbles.png";
 import kreisImg from "@/assets/kreis.png";
@@ -242,13 +243,19 @@ const Index = () => {
             style={{ fontFamily: "Public Sans" }}
           >
             <span className="block leading-[1.2]">
-              Jetzt <span className="text-lime">Tickets</span> für das große <span className="text-lime">Finale</span> <br />
-              am <span className="text-lime">3. Juli</span> in der Otten Gravour sichern
-            </span>
+              Gewinnerin <span className="text-lime">2026:</span> <br />
+            Sinem Duvan </span>
           </p>
+          <img
+            src={sinemDuvanImage}
+            alt="Sinem Duvan"
+            className="mx-auto w-full max-w-[1100px] h-auto rounded-2xl object-cover"
+            loading="lazy"
+          />
+        
 
           {/* CTA Button */}
-          <div className="flex justify-center mt-16 md:mt-28">
+        {/*   <div className="flex justify-center mt-16 md:mt-28">
             <a
               href="https://www.eventbrite.at/e/model-me-finale-2026-tickets-1980367037118?aff=oddtdtcreator"
               target="_blank"
@@ -257,7 +264,7 @@ const Index = () => {
             >
               Jetzt Ticket sichern
             </a>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -293,7 +300,7 @@ const Index = () => {
           className="absolute right-4 md:right-8 lg:right-16 xl:right-24 top-auto bottom-[calc(6rem)] md:bottom-[calc(7rem-70px)] lg:bottom-[calc(9rem-70px)] xl:bottom-[calc(11rem-70px)] text-white text-6xl md:text-6xl lg:text-8xl xl:text-[148px] font-bold leading-[110%] pointer-events-none z-10"
           style={{ fontFamily: "norman-variable, sans-serif", mixBlendMode: "difference" }}
         >
-          2025
+          2026
         </h2>
         <h2
           className="absolute left-4 md:left-8 lg:left-16 xl:left-24 top-auto bottom-[calc(10rem+20px)] md:bottom-[calc(15rem)] lg:bottom-[calc(20rem)] xl:bottom-[calc(24rem)] text-white text-6xl md:text-6xl lg:text-8xl xl:text-[148px] font-bold leading-[110%] pointer-events-none z-10"
